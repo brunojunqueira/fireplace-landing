@@ -1,0 +1,32 @@
+:root{
+  --alt-green: #017044;
+  --alt-orange: #FF6546;
+  --alt-red: #BD4028;
+  --darksteelblue: #4828b8;
+  --alt-white: #FFF7EB;
+}
+
+html,
+body {
+  min-height: 100vh;
+  display: grid;
+  background: #0c092a;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+}

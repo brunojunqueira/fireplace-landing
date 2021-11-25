@@ -1,0 +1,47 @@
+.input{
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    padding: 1.25rem .75rem;
+    font-size: 16px;
+    height: fit-content;
+}
+
+.success {
+    border-radius: 8px;
+    border: none;
+    padding: 1.25rem .75rem;
+    font-size: 16px;
+    height: fit-content;
+}
+.success:focus{
+    outline: 1.5px solid lightgreen;
+}
+
+.error {
+    border-radius: 8px;
+    border: none;
+    padding: 1.25rem .75rem;
+    font-size: 16px;
+    height: fit-content;
+}
+.error:focus{
+    outline: 1.5px solid red;
+}
+
+.alert{
+    cursor: default;
+    user-select: none;
+    opacity: 0;
+    height: 0;
+    color: red;
+    font-size: small;
+    font-style: italic;
+    transition: none;
+}
+
+.error:focus + .alert{
+    opacity: 1;
+    height: fit-content;
+    transition: height .3s ease-in, opacity .3s ease-in;
+}

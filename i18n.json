@@ -1,0 +1,9 @@
+{ 
+    "locales": ["en-US", "pt-BR"], 
+    "defaultLocale": "en-US",
+    "pages":{
+        "*": ["home"],
+        "/login": ["login"],
+        "/register": ["register"]
+    }
+}

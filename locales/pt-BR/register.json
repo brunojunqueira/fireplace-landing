@@ -1,0 +1,15 @@
+{
+    "register": "Criar Conta",
+    "fn": "Nome",
+    "ln": "Sobrenome",
+    "ml": "E-mail",
+    "un": "Pseudônimo",
+    "pw": "Senha",
+    "cpw": "Confirmar Senha",
+    "fnalert": "Insira apenas seu primeiro nome, sem espaços.",
+    "lnalert": "Insira apenas seu último nome, sem espaços.",
+    "mlalert": "Insira um email válido!",
+    "unalert": "São permitidos apenas cacteres alfanúmericos e alguns especiais ('.', '_' e '-').",
+    "pwalert": "A senha deve conter no mínimo 8 caracteres.",
+    "cpwalert": "As senhas devem coincidir!"
+}

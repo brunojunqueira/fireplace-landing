@@ -1,0 +1,17 @@
+
+.title{
+    font-family: 'Calibri', sans-serif;
+    white-space: nowrap;
+    color: white;
+    letter-spacing: .325rem;
+    cursor: default;
+    user-select: none;
+    text-align: left;
+    border-right: .03em solid white;
+    animation: blinkcaret .70s step-end infinite;
+}
+  
+@keyframes blinkcaret {
+from, to { border-color: transparent }
+50% { border-color: white; }
+}
