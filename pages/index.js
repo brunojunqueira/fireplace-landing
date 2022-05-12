@@ -35,8 +35,8 @@ export default function Home() {
           <span className={style.infotxt}>{t('home:t1')}</span>
         </div>
         <div className={style.info}>
-          <span className={style.infoimg}>{t('home:t2')}</span>
-          <img className={style.infotxt} src="https://images.unsplash.com/photo-1521022969448-49639904ed7b" alt='image'/>
+          <span className={style.infotxt}>{t('home:t2')}</span>
+          <img className={style.infoimg} src="https://images.unsplash.com/photo-1521022969448-49639904ed7b" alt='image'/>
         </div>
         <div className={style.info}>
           <span className={style.infotxt}>{t('home:l')}</span>
