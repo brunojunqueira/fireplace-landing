@@ -1,10 +1,14 @@
 import Head from "next/head"
 
-export default function Resources({title, sshref}){
+export default function Resources({title, sources = null}){
     return(
         <Head>
             <title>{title}</title>
-            <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel="stylesheet"/>
+            {sources?.map((source, index) =>{
+                return(
+                    <link href={source.href} rel={source.rel}/>
+                )
+            })}
         </Head>
         )
 }

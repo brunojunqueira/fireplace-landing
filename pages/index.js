@@ -12,32 +12,34 @@ export default function Home() {
   let home = useTranslation('home')
 
   return (
-    <div className={style.c}>
-      <Resources title='À Lareira' sshref='https://fonts.googleapis.com/icon?family=Material+Icons'/>
-
-      <main className={style.m}>
+    <div className={style.content}>
+      <Resources 
+        title='À Lareira' 
+        sources={[
+          {href:'https://fonts.googleapis.com/icon?family=Material+Icons', rel:'stylesheet'}
+        ]}
+      />
+      <main className={style.main}>
         <LogoEffect size={130} text={'À Lareira'}/>
-        <Link href='./login'><button className={style.lb}>{global.t('login')}</button></Link>
-        <Link href='./register'><button className={style.sb}>{global.t('register')}</button></Link>
-        <Link href='./feed'><button className={style.nb}>{global.t('notnow')}</button></Link>
+        <Link href='./login'><button className={style.loginbtn}>{global.t('login')}</button></Link>
+        <Link href='./register'><button className={style.registerbtn}>{global.t('register')}</button></Link>
+        <Link href='./feed'><button className={style.notnowbtn}>{global.t('notnow')}</button></Link>
       </main>
-      <div className={style.ac}>
-        <span onClick={() => scrollTo({top: window.screenY, behavior:'smooth'})} style={{fontSize:'35px', cursor:'pointer', color:'white'}} className="material-icons">keyboard_arrow_down</span>
+      <div className={style.arrowcontainer}>
+        <span onClick={() => scrollTo({top: window.screenY, behavior:'smooth'})} style={style.arrow} className="material-icons">keyboard_arrow_down</span>
+        <span onClick={() => scrollTo({top: 0, behavior:'smooth'})} style={style.arrow} className="material-icons">keyboard_arrow_up</span>
       </div>
-      <div className={style.ac}>
-        <span onClick={() => scrollTo({top: 0, behavior:'smooth'})} style={{fontSize:'35px', cursor:'pointer', color:'white'}} className="material-icons">keyboard_arrow_up</span>
-      </div>
-      <div className={style.ic}>
-        <div className={style.if}>
-          <img className={style.ii} src="https://unsplash.com/photos/S_VbdMTsdiA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1MzAyNTI0&force=true"/>
-          <span className={style.it}>{home.t('t1')}</span>
+      <div className={style.infoContainer}>
+        <div className={style.info}>
+          <img className={style.infoimg} src="https://unsplash.com/photos/S_VbdMTsdiA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1MzAyNTI0&force=true"/>
+          <span className={style.infotxt}>{home.t('t1')}</span>
         </div>
-        <div className={style.if}>
-          <span className={style.it}>{home.t('t2')}</span>
-          <img className={style.ii} src="https://unsplash.com/photos/XqXJJhK-c08/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1Mjc1NDg3&force=true"/>
+        <div className={style.info}>
+          <span className={style.infoimg}>{home.t('t2')}</span>
+          <img className={style.infotxt} src="https://unsplash.com/photos/XqXJJhK-c08/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1Mjc1NDg3&force=true"/>
         </div>
-        <div className={style.if}>
-          <span className={style.it}>{home.t('l')}</span>
+        <div className={style.info}>
+          <span className={style.infotxt}>{home.t('l')}</span>
         </div>
       </div>
       <Footer className={style.footer}/>
