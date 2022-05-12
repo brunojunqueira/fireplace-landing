@@ -8,8 +8,7 @@ import Resources from '../components/Resources'
 
 export default function Home() {
 
-  let global = useTranslation('global');
-  let home = useTranslation('home')
+  let {t} = useTranslation(['global', 'home']);
 
   return (
     <div className={style.content}>
