@@ -32,12 +32,12 @@ export default function Home() {
       </div>
       <div className={style.infoContainer}>
         <div className={style.info}>
-          <Image className={style.infoimg} src="https://unsplash.com/photos/S_VbdMTsdiA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1MzAyNTI0&force=true" alt='image'/>
+          <Image className={style.infoimg} src="https://images.unsplash.com/photo-1582894535021-f875b7d0c4ea" alt='image'/>
           <span className={style.infotxt}>{t('home:t1')}</span>
         </div>
         <div className={style.info}>
           <span className={style.infoimg}>{t('home:t2')}</span>
-          <Image className={style.infotxt} src="https://unsplash.com/photos/XqXJJhK-c08/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1Mjc1NDg3&force=true" alt='image'/>
+          <Image className={style.infotxt} src="https://images.unsplash.com/photo-1521022969448-49639904ed7b" alt='image'/>
         </div>
         <div className={style.info}>
           <span className={style.infotxt}>{t('home:l')}</span>
