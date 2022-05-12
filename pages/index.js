@@ -22,7 +22,7 @@ export default function Home() {
         <Link href='./feed'><button className={style.nb}>{global.t('notnow')}</button></Link>
       </main>
       <div className={style.ac}>
-        <span onClick={() => scrollTo({bottom: 0, behavior:'smooth'})} style={{fontSize:'35px', cursor:'pointer', color:'white'}} className="material-icons">keyboard_arrow_down</span>
+        <span onClick={() => scrollTo({top: window.screenY, behavior:'smooth'})} style={{fontSize:'35px', cursor:'pointer', color:'white'}} className="material-icons">keyboard_arrow_down</span>
       </div>
       <div className={style.ac}>
         <span onClick={() => scrollTo({top: 0, behavior:'smooth'})} style={{fontSize:'35px', cursor:'pointer', color:'white'}} className="material-icons">keyboard_arrow_up</span>
