@@ -27,8 +27,8 @@ export default function Home() {
         <Link href='./feed'><button className={style.notnowbtn}>{t('global:notnow')}</button></Link>
       </main>
       <div className={style.arrowcontainer}>
-        <span onClick={() => scrollTo({top: window.screenY, behavior:'smooth'})} className="material-icons">keyboard_arrow_down</span>
-        <span onClick={() => scrollTo({top: 0, behavior:'smooth'})} className="material-icons">keyboard_arrow_up</span>
+        <span onClick={() => scrollTo({top: window.innerHeight, behavior:'smooth'})} style={{ cursor:'pointer' }} className="material-icons">keyboard_arrow_down</span>
+        <span onClick={() => scrollTo({top: 0, behavior:'smooth'})} style={{ cursor:'pointer' }} className="material-icons">keyboard_arrow_up</span>
       </div>
       <div className={style.infoContainer}>
         <div className={style.info}>
