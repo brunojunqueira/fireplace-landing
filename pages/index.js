@@ -27,17 +27,17 @@ export default function Home() {
         <Link href='./feed'><button className={style.notnowbtn}>{t('notnow')}</button></Link>
       </main>
       <div className={style.arrowcontainer}>
-        <span onClick={() => scrollTo({top: window.screenY, behavior:'smooth'})} style={style.arrow} className="material-icons">keyboard_arrow_down</span>
-        <span onClick={() => scrollTo({top: 0, behavior:'smooth'})} style={style.arrow} className="material-icons">keyboard_arrow_up</span>
+        <span onClick={() => scrollTo({top: window.screenY, behavior:'smooth'})} className="material-icons">keyboard_arrow_down</span>
+        <span onClick={() => scrollTo({top: 0, behavior:'smooth'})} className="material-icons">keyboard_arrow_up</span>
       </div>
       <div className={style.infoContainer}>
         <div className={style.info}>
-          <Image className={style.infoimg} src="https://unsplash.com/photos/S_VbdMTsdiA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1MzAyNTI0&force=true"/>
+          <Image className={style.infoimg} src="https://unsplash.com/photos/S_VbdMTsdiA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1MzAyNTI0&force=true" alt='image'/>
           <span className={style.infotxt}>{t('t1', {ns: 'home'})}</span>
         </div>
         <div className={style.info}>
           <span className={style.infoimg}>{t('t2', {ns: 'home'})}</span>
-          <Image className={style.infotxt} src="https://unsplash.com/photos/XqXJJhK-c08/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1Mjc1NDg3&force=true"/>
+          <Image className={style.infotxt} src="https://unsplash.com/photos/XqXJJhK-c08/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjM1Mjc1NDg3&force=true" alt='image'/>
         </div>
         <div className={style.info}>
           <span className={style.infotxt}>{t('l', {ns: 'home'})}</span>
