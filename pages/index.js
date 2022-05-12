@@ -8,7 +8,7 @@ import Resources from '../components/Resources'
 
 export default function Home() {
 
-  let {t} = useTranslation('home');
+  let {t} = useTranslation('global');
 
   return (
     <div className={style.c}>
