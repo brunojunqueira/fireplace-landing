@@ -57,9 +57,9 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size:'35px';
-  cursor:'pointer';
-  color:'white'
+  font-size: 35px;
+  cursor: pointer;
+  color: white;
 }
 
 .infoContainer{
