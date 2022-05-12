@@ -75,9 +75,8 @@
 }
 
 .info{
-  display: flex;
   gap: 4rem;
-  width: fit-content;
+  width: 80%;
 }
 
 .infoimg{
