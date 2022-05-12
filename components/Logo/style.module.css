@@ -2,13 +2,9 @@
 .logo{
     cursor: default;
     user-select: none;
-    text-align: left;
-    border-right: .03em solid white;
 }
 
-.clickableLogo{
-    cursor: default;
+.logoClickable{
+    cursor: pointer;
     user-select: none;
-    text-align: left;
-    border-right: .03em solid white;
 }
