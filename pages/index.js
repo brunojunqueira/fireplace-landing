@@ -9,8 +9,6 @@ import style from '../styles/home.module.css'
 
 export default function Home() {
 
-  const height = window.screen.availHeight;
-
   const {t} = useTranslation();
 
   return (
@@ -28,7 +26,7 @@ export default function Home() {
         <Link href='./feed'><button className={style.notnowbtn}>{t('global:notnow')}</button></Link>
       </main>
       <div className={style.arrowcontainer}>
-        <span onClick={() => scrollTo({top: height.toString(), behavior:'smooth'})} style={{ cursor:'pointer' }} className="material-icons">keyboard_arrow_down</span>
+        <span onClick={() => scrollTo({top: window.screen.availHeight, behavior:'smooth'})} style={{ cursor:'pointer' }} className="material-icons">keyboard_arrow_down</span>
         <span onClick={() => scrollTo({top: 0, behavior:'smooth'})} style={{ cursor:'pointer' }} className="material-icons">keyboard_arrow_up</span>
       </div>
       <div className={style.infoContainer}>
