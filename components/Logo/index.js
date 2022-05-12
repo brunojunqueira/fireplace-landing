@@ -10,6 +10,7 @@ export const Logo = ({clickable = false, color='#FFFFFF', ...props}) => {
         <div
             onClick={clickable ? ()=>router.push('/feed') : ()=>{}}
             className={clickable ? style.logoClickable : style.logo}
+            {...props}
         >
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 
