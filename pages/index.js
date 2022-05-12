@@ -2,7 +2,7 @@ import Head from 'next/head'
 import useTranslation from 'next-translate/useTranslation'
 import Footer from '../components/Footer'
 import Link from 'next/dist/client/link'
-import LogoEffect from '../components/LogoEffect'
+import Logo from '../components/Logo'
 import Resources from '../components/Resources'
 
 import style from '../styles/home.module.css'
@@ -20,7 +20,7 @@ export default function Home() {
         ]}
       />
       <main className={style.main}>
-        <LogoEffect size={130} text={'À Lareira'}/>
+        <Logo/>
         <Link href='./login'><button className={style.loginbtn}>{t('global:login')}</button></Link>
         <Link href='./register'><button className={style.registerbtn}>{t('global:register')}</button></Link>
         <Link href='./feed'><button className={style.notnowbtn}>{t('global:notnow')}</button></Link>
