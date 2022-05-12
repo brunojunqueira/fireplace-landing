@@ -6,7 +6,7 @@ export default function Resources({title, sources = null}){
             <title>{title}</title>
             {sources?.map((source, index) =>{
                 return(
-                    <link href={source.href} rel={source.rel}/>
+                    <link key={index} href={source.href} rel={source.rel}/>
                 )
             })}
         </Head>
