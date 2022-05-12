@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import Footer from '../components/Footer'
 import Link from 'next/dist/client/link'
@@ -32,12 +31,12 @@ export default function Home() {
       </div>
       <div className={style.infoContainer}>
         <div className={style.info}>
-          <Image className={style.infoimg} src="https://images.unsplash.com/photo-1582894535021-f875b7d0c4ea" alt='image'/>
+          <img className={style.infoimg} src="https://images.unsplash.com/photo-1582894535021-f875b7d0c4ea" alt='image'/>
           <span className={style.infotxt}>{t('home:t1')}</span>
         </div>
         <div className={style.info}>
           <span className={style.infoimg}>{t('home:t2')}</span>
-          <Image className={style.infotxt} src="https://images.unsplash.com/photo-1521022969448-49639904ed7b" alt='image'/>
+          <img className={style.infotxt} src="https://images.unsplash.com/photo-1521022969448-49639904ed7b" alt='image'/>
         </div>
         <div className={style.info}>
           <span className={style.infotxt}>{t('home:l')}</span>
