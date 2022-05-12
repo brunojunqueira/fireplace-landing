@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className={style.content}>
       <Resources 
-        title='À Lareira' 
+        title='Fireplace' 
         sources={[
           {href:'https://fonts.googleapis.com/icon?family=Material+Icons', rel:'stylesheet'}
         ]}
