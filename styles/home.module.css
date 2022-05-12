@@ -58,7 +58,7 @@
 }
 
 .arrow{
-  fontSize:'35px';
+  font-size:'35px';
   cursor:'pointer';
   color:'white'
 }
@@ -76,10 +76,8 @@
 
 .info{
   display: flex;
-  flex-direction: row;
   gap: 4rem;
-  width: max-content;
-  word-wrap: break-word;
+  width: fit-content;
 }
 
 .infoimg{
@@ -94,6 +92,5 @@
   word-wrap: break-word;
   white-space: pre-wrap;
   font-size: 24px;
-  max-width: 50rem;
   color: #1F1E1E;
 }
