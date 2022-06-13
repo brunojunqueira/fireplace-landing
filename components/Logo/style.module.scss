@@ -1,0 +1,18 @@
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    user-select: none;
+    gap: 10px;
+}
+
+.logoClickable{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    gap: 10px;
+}

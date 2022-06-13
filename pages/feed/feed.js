@@ -1,5 +1,7 @@
-export const Feed = (props) => {
+const Feed = (props) => {
     return(
         <h1> Feed </h1>
     )
 }
+
+export { Feed };
