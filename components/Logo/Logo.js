@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from "next/router"
 
-import style from "./style.module.scss"
+import style from "./logo.module.scss"
 
 const Logo = ({clickable = false, color = '#FFFFFF', ...props}) => {
 

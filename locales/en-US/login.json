@@ -1,3 +1,7 @@
 {
-    
+    "login": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "remember": "Remember me",
+    "forgot": "Forgot the password?"
 }

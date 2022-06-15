@@ -1,3 +1,7 @@
 {
-    
+    "login": "Entrar",
+    "email": "Email",
+    "password": "Senha",
+    "remember": "Lembre-se de mim",
+    "forgot": "Esqueceu a senha?"
 }

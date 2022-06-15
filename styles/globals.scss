@@ -18,10 +18,10 @@
 html,
 body {
   background: var(--dark-grey);
+  box-shadow: -15px -15px 150px rgba(0,0,0,0.9) inset;
+  min-height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    min-height: 100%;
-  box-shadow: -15px -15px 150px rgba(0,0,0,0.9) inset;
 }
 
 a {

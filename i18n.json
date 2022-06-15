@@ -2,7 +2,6 @@
     "locales": ["en-US", "pt-BR"], 
     "defaultLocale": "en-US",
     "pages":{
-        "*": ["global"],
         "/": ["home"],
         "/login": ["login"],
         "/register": ["register"]
