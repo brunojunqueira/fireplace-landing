@@ -1,8 +1,9 @@
 import useTranslation from 'next-translate/useTranslation'
 import Main from '../../components/Main';
 import style from './login.module.scss'
+import router from 'next/router';
 
-const Login = (props) => {
+function Login() {
 
     const { t } = useTranslation('login');
 
@@ -17,7 +18,7 @@ const Login = (props) => {
 
     return(
         <Main
-            title='Entrar'
+            title={t('login')}
             sources={[
             {
                 href:'https://fonts.googleapis.com/icon?family=Material+Icons', 
@@ -30,24 +31,44 @@ const Login = (props) => {
             ]}
         >
             <div className={ style.content }>
+                <div
+                    className={style.back}
+                >
+                    <span 
+                        className="material-symbols-outlined"
+                        onClick={() => router.push('/')}
+                    >
+                        arrow_back
+                    </span>
+                </div> 
                 <form 
                     className={style.form}
                     onSubmit={onSubmit}
                 >
+                    <span
+                        className={style.label}
+                    >
+                        {t('email')}:
+                    </span>
                     <input
                         id='email'
                         name='email'
                         type='email'
-                        placeholder={t('email')}
+                        placeholder='linspector@email.com'
                         className={style.input}
                         required
                     >
                     </input>
+                    <span
+                        className={style.label}
+                    >
+                        {t('password')}:
+                    </span>
                     <input
                         id='password'
                         name='password'
                         type='password'
-                        placeholder={t('password')}
+                        placeholder='•••••••••'
                         className={style.input}
                         required
                     >

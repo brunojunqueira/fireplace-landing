@@ -8,7 +8,7 @@ const Footer = () => {
     let year = new Date().getFullYear();
 
     return(
-        <div className={style.footer}>
+        <footer className={style.footer}>
             <span>Whales&Koalas © {year}</span>
             <ul className={style.ls}>
             {router.locales.map(locale => (
@@ -19,7 +19,7 @@ const Footer = () => {
                 </li>
             ))}
             </ul>
-        </div>
+        </footer>
     )
 }
 

@@ -1,7 +1,8 @@
 import useTranslation from 'next-translate/useTranslation'
-import Link from 'next/dist/client/link'
 import Logo from '../components/Logo'
 import Main from '../components/Main';
+
+import router from 'next/router';
 
 import style from '../styles/home.module.scss'
 
@@ -33,9 +34,10 @@ export default function Home() {
                     }}
                     color='var(--alt-red)'
                     />
-                    <Link href='./login'>
                     <button 
-                        className={style.loginbtn}>
+                        className={style.loginbtn}
+                        onClick={ () => router.push('/login') }
+                    >
                         <span>
                             {t('login')}
                         </span>
@@ -43,16 +45,19 @@ export default function Home() {
                             login
                         </span>
                     </button>
-                    </Link>
-                    <Link href='./register'>
+
                     <button 
-                        className={style.registerbtn}>
+                        className={style.registerbtn}
+                        onClick={ () => router.push('/register') }
+                    >
                         {t('register')}
                     </button>
-                    </Link>
-                    <Link href='./feed'>
-                    <button className={style.notnowbtn}>{t('notnow')}</button>
-                    </Link>
+                    <button 
+                        className={style.notnowbtn}
+                        onClick={ () => router.push('/feed') }
+                    >
+                        {t('notnow')}
+                    </button>
                 </main>
             </div>
         </Main>

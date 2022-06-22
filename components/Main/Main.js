@@ -14,7 +14,12 @@ const Main = (props) => {
                 title={props?.title}
                 sources={props?.sources}
             />
-            { props.children }
+            <main
+                className={style.main}
+            >
+                { props?.children }
+            </main>
+            
             <Footer/>
         </div>
     )
