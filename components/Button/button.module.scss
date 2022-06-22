@@ -1,0 +1,14 @@
+.buttonContent {
+    border: none;
+    border-radius: 0.5rem;
+
+    padding: 1rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--alt-red);
+    color: var(--alt-white);
+    font-weight: 600;
+}

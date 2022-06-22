@@ -1341,27 +1341,6 @@ foreach@^2.0.5:
   resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
   integrity sha1-C+4AUBiusmDQo6865ljdATbsG5k=
 
-form-data-to-object@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/form-data-to-object/-/form-data-to-object-0.2.0.tgz#f7a8e68ddd910a1100a65e25ac6a484143ff8168"
-  integrity sha1-96jmjd2RChEApl4lrGpIQUP/gWg=
-
-formsy-react@^2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/formsy-react/-/formsy-react-2.2.5.tgz#773d2864f227b08d1cf9b51a14089dfd7c453ab8"
-  integrity sha512-viPbikrOes8vWY5HvkR0+OkE1fnIs5rE3cZ6GTQK+zHN1iw81I9l53ihrt2i8WLqb+cMEnV6HyIhdjsDuu17hw==
-  dependencies:
-    lodash "^4.17.20"
-    lodash-es "^4.17.21"
-    prop-types "^15.7.2"
-
-formsy@^0.19.2:
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/formsy/-/formsy-0.19.2.tgz#25f7f83105cfd8ea0beb740aa8c7188e11a994b5"
-  integrity sha1-Jff4MQXP2OoL63QKqMcYjhGplLU=
-  dependencies:
-    form-data-to-object "^0.2.0"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -1867,11 +1846,6 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash-es@^4.17.21:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
-  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
-
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
@@ -1886,11 +1860,6 @@ lodash.truncate@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
-
-lodash@^4.17.20:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
