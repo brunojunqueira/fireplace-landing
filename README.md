@@ -1,8 +1,8 @@
 This is a Social Network based on Writers and Readers.
 
-## Creators
+# Creators
 
-# Whales&Koalas Inc.
+## Whales&Koalas Inc.
 
 - Bruno Junqueira
 - Daniel Pelajo
