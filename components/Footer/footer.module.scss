@@ -11,6 +11,11 @@
     & span{
         font-size: 14px;
     }
+
+    @media(max-width: 480px) {
+        flex-direction: column;
+        row-gap: .2rem;
+    }
 }
 
 .ls{

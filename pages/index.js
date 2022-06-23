@@ -26,14 +26,7 @@ export default function Home() {
         >
             <div className={style.content}>
                 <main className={style.main}>
-                    <Logo
-                    style={{
-                        height:'150px', 
-                        width:'500px', 
-                        paddingBottom:'75px'
-                    }}
-                    color='var(--alt-red)'
-                    />
+                    <Logo/>
                     <button 
                         className={style.loginbtn}
                         onClick={ () => router.push('/login') }
