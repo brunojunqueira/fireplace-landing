@@ -22,7 +22,12 @@
         outline: none;
 
         &:focus-visible {
-            border: 2px solid var(--alt-red);
+            border: 2.5px solid var(--alt-red);
+        }
+
+        &::placeholder {
+            font-weight: 500;
+            opacity: .5;
         }
     }
 }

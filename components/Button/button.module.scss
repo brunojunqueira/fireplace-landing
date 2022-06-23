@@ -7,8 +7,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
     background: var(--alt-red);
     color: var(--alt-white);
     font-weight: 600;
+
+    transition: filter .3s;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
 }

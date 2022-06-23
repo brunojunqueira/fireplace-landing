@@ -27,43 +27,52 @@ function Register() {
         >
             <main className={style.registerContainer}>
                 <form onSubmit={handleSubmitRegister}>
-                    <div className={style.formHeader}>
-                        <h1>Registrar-se</h1>
-                    </div>
+                    <Logo />
+                    <h1 className={style.formTitle}>Registre-se</h1>
                     
                     <InputText 
                         label="E-mail"
+                        placeholder="linspector@email.com"
                         type="text"
                         name="email"
                         id="email"
+                        required
                     />
 
                     <InputText 
                         label="Nome Completo"
+                        placeholder="Linspector"
                         type="text"
                         name="fullName"
                         id="fullName"
+                        required
                     />
 
                     <InputText 
                         label="Pseudônimo"
+                        placeholder="Lorem Ipsum"
                         type="text"
                         name="pseudonym"
                         id="pseudonym"
+                        required
                     />
 
                     <InputText 
                         label="Senha"
+                        placeholder="•••••••••"
                         type="password"
                         name="password"
                         id="password"
+                        required
                     />
 
                     <InputText 
                         label="Confirmar Senha"
+                        placeholder="•••••••••"
                         type="password"
                         name="confirmPassword"
                         id="confirmPassword"
+                        required
                     />
 
                     <Button type="submit">

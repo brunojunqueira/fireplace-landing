@@ -16,3 +16,13 @@
     user-select: none;
     gap: 10px;
 }
+
+.logoText {
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: 'Lora';
+
+    @media (max-width: 480px) {
+        display: none;
+    }
+}
