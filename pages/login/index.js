@@ -1,21 +1,25 @@
 import useTranslation from 'next-translate/useTranslation'
-import Main from '../../components/Main';
-import style from './login.module.scss'
 import router from 'next/router';
-import { InputText } from '../../components/InputText';
-import { Button } from '../../components/Button';
+import { useForm, Controller } from 'react-hook-form';
+
+import style from './login.module.scss'
+import Main from '../../components/Main';
 import Logo from '../../components/Logo';
+import { Button } from '../../components/Button';
+import { InputText } from '../../components/InputText';
+
+
 
 function Login() {
 
     const { t } = useTranslation('login');
 
-    function onSubmit(e){
+    const { handleSubmit, control, setError, clearErrors, formState: { errors } } = useForm();
 
-        e.preventDefault();
 
-        let email = e.target.email.value;
-        let password = e.target.password.value;
+    const onSubmit = (data) => {
+
+        console.log(data);
 
     }
 
@@ -34,53 +38,62 @@ function Login() {
             ]}
         >
             <div className={ style.content }>
-                <div
-                    className={style.back}
-                >
-                    <span 
-                        className="material-symbols-outlined"
-                        onClick={() => router.push('/')}
-                    >
-                        arrow_back
-                    </span>
-                </div> 
+
                 <Logo />
+
                 <form 
                     className={style.form}
-                    onSubmit={onSubmit}
+                    onSubmit={handleSubmit(onSubmit)}
                 >
-                    <InputText
-                        label={t('email')}
-                        id='email'
+
+                    <Controller 
+                        control={control}
                         name='email'
-                        type='email'
-                        placeholder='linspector@email.com'
-                        className={style.input}
-                        required
-                    >
-                    </InputText>
-                    <InputText
-                        label={t('password')}
-                        id='password'
+                        render={ ({field:{ onChange }} ) => (
+                            <InputText
+                                type='email'
+                                variant='minimalist'
+                                label={t('email')}
+                                onChange={onChange}
+                                error={errors?.email}
+                            />
+                        )}
+                        rules={{required: t('emailerror') }}
+                    />
+
+                    <Controller 
+                        control={control}
                         name='password'
-                        type='password'
-                        placeholder='•••••••••'
-                        className={style.input}
-                        required
-                    >
-                    </InputText>
+                        render={ ({field:{ onChange }}) => (
+                            <InputText
+                                type='password'
+                                variant='minimalist'
+                                label={t('password')}
+                                onChange={onChange}
+                                error={errors?.password}
+                            />
+                        )}
+                        rules={{required: t('passwordRequired') }}
+                    />                    
+
                     <Button
                         type='submit'
                     >
+
                         <span>
                             {t('login')}
                         </span>
+
                         <span className="material-symbols-outlined">
                             login
                         </span>
+
                     </Button>
+
                 </form>
+
             </div>
+
         </Main>
     )
 }

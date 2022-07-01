@@ -3,5 +3,7 @@
     "email": "Email",
     "password": "Password",
     "remember": "Remember me",
-    "forgot": "Forgot the password?"
+    "forgot": "Forgot the password?",
+    "emailerror":"Insert a valid email!",
+    "passwordRequired":"A password is required!"
 }

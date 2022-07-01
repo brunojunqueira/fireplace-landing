@@ -6,18 +6,13 @@
     cursor: default;
     user-select: none;
     gap: 10px;
+    
+    &.clickable{
+        cursor: pointer;
+    }
 }
 
-.logoClickable{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    user-select: none;
-    gap: 10px;
-}
-
-.logoText {
+.logo__text {
     font-size: 6rem;
     font-weight: 400;
     font-family: 'Lora';

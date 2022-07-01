@@ -25,33 +25,34 @@ export default function Home() {
             ]}
         >
             <div className={style.content}>
-                <main className={style.main}>
-                    <Logo/>
-                    <button 
-                        className={style.loginbtn}
-                        onClick={ () => router.push('/login') }
-                    >
-                        <span>
-                            {t('login')}
-                        </span>
-                        <span className="material-symbols-outlined">
-                            login
-                        </span>
-                    </button>
-
-                    <button 
-                        className={style.registerbtn}
-                        onClick={ () => router.push('/register') }
-                    >
-                        {t('register')}
-                    </button>
-                    <button 
-                        className={style.notnowbtn}
-                        onClick={ () => router.push('/feed') }
-                    >
-                        {t('notnow')}
-                    </button>
-                </main>
+                <div className={style.main}>
+                    <Logo />
+                    <div className={style.buttons}>
+                        <button 
+                            className={style.loginbtn}
+                            onClick={ () => router.push('/login') }
+                        >
+                            <span>
+                                {t('login')}
+                            </span>
+                            <span className="material-symbols-outlined">
+                                login
+                            </span>
+                        </button>
+                        <button 
+                            className={style.registerbtn}
+                            onClick={ () => router.push('/register') }
+                        >
+                            {t('register')}
+                        </button>
+                        <button 
+                            className={style.notnowbtn}
+                            onClick={ () => router.push('/feed') }
+                        >
+                            {t('notnow')}
+                        </button>
+                    </div>
+                </div>
             </div>
         </Main>
     )

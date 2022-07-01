@@ -9,4 +9,9 @@
     justify-content: center;
     min-height: calc(100vh - 45px);
     width: 100%;
+
+    @media(max-width: 480px) {
+        min-height: calc(100vh - 60px);
+    }
+
 }

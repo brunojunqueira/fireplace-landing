@@ -9,8 +9,8 @@ const Logo = ({clickable = false, color = '#A61103', ...props}) => {
 
     return( 
         <div
-            onClick={clickable ? ()=>router.push('/feed') : ()=>{}}
-            className={clickable ? style.logoClickable : style.logo}
+            onClick={clickable ? () => router.push('/feed') : () => {}}
+            className={`${style.logo} ${clickable && style.clickable}`}
             {...props}
         >
             <svg xmlns="http://www.w3.org/2000/svg" fill={color} style={{ width: '5rem' }} viewBox="68.5 87.30000305175781 375.0999755859375 337.5">
@@ -18,7 +18,7 @@ const Logo = ({clickable = false, color = '#A61103', ...props}) => {
                 <path d="M297.9 424.4c8.8-10 14.3-23 14.3-37.3-.1-31.1-56.6-93.5-56.6-93.5s-56 62.9-55.9 94c.1 14.4 5.6 27.3 14.5 37.2 16.6-28 41.6-56.2 41.6-56.2s25.3 27.9 42.1 55.8z"></path>
             </svg>
             <h1 
-                className={style.logoText}
+                className={style.logo__text}
                 style={{
                     color: color,
                 }}

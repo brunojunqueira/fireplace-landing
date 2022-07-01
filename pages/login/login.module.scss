@@ -5,18 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 2rem;
     animation: in-left 0.5s;
-}
-
-.back{
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-    animation: in-left .5s;
 }
 
 @keyframes in-left {
@@ -30,17 +20,15 @@
 }
 
 .form{
-    width: 30%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .5rem;
+    gap: .1rem;
     font-size: 14px;
         
-    @media(max-width: 1024px){
-        width: 40%;
-    }
-    
     @media(max-width: 720px){
         width: 60%;
     }
@@ -63,4 +51,3 @@
     }
 
 }
-
