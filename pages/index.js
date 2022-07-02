@@ -1,56 +1,39 @@
 import useTranslation from 'next-translate/useTranslation'
-import Logo from '../components/Logo'
-import Main from '../components/Main';
-
-import router from 'next/router';
+import Logo from '../components/design/Logo'
+import Main from '../templates/Main';
 
 import style from '../styles/home.module.scss'
+import { Button } from '../components/common/Button';
 
 export default function Home() {
 
     const { t } = useTranslation('home');
 
     return (
-        <Main 
-            title='Fireplace'
-            sources={[
-            {
-                href:'https://fonts.googleapis.com/icon?family=Material+Icons', 
-                rel:'stylesheet'
-            },
-            {
-                href:'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
-                rel:'stylesheet'
-            }
-            ]}
-        >
+        <Main title='Fireplace'>
             <div className={style.content}>
-                <div className={style.main}>
+                <div className={style.content__main}>
                     <Logo />
+
                     <div className={style.buttons}>
-                        <button 
-                            className={style.loginbtn}
-                            onClick={ () => router.push('/login') }
-                        >
-                            <span>
-                                {t('login')}
-                            </span>
-                            <span className="material-symbols-outlined">
-                                login
-                            </span>
-                        </button>
-                        <button 
-                            className={style.registerbtn}
-                            onClick={ () => router.push('/register') }
-                        >
-                            {t('register')}
-                        </button>
-                        <button 
-                            className={style.notnowbtn}
-                            onClick={ () => router.push('/feed') }
-                        >
-                            {t('notnow')}
-                        </button>
+                        <Button 
+                            className={style.buttons__login} 
+                            redirectTo='/login' 
+                            rightIcon='login' 
+                            text={t('login')} 
+                        />  
+
+                        <Button 
+                            className={style.buttons__register} 
+                            redirectTo='/register' 
+                            text={t('register')} 
+                        />                            
+                        
+                        <Button 
+                            className={style.buttons__not_now} 
+                            redirectTo='/feed' 
+                            text={t('notnow')} 
+                        />
                     </div>
                 </div>
             </div>

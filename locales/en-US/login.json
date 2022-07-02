@@ -5,5 +5,6 @@
     "remember": "Remember me",
     "forgot": "Forgot the password?",
     "emailerror":"Insert a valid email!",
-    "passwordRequired":"A password is required!"
+    "passwordRequired":"A password is required!",
+    "passwordError": "Wrong password!"
 }

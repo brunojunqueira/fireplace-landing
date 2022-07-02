@@ -1,7 +1,7 @@
 {
     "register": "Criar Conta",
-    "firstName": "Nome",
-    "lastName": "Sobrenome",
+    "name": "Nome",
+    "forname": "Sobrenome",
     "email": "E-mail",
     "userName": "Pseudônimo",
     "password": "Senha",

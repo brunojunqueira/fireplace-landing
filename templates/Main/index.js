@@ -1,5 +1,5 @@
-import Footer from "../Footer"
-import Resources from "../Resources"
+import Footer from "../../components/fixed/Footer"
+import Resources from "../../components/fixed/Resources"
 
 import style from './main.module.scss'
 

@@ -1,7 +1,7 @@
 {
     "register": "Create Account",
-    "firstName": "Name",
-    "lastName": "Last Name",
+    "name": "Name",
+    "forname": "Forname",
     "email": "E-mail",
     "userName": "Username",
     "password": "Password",

@@ -47,10 +47,12 @@
     input{
         background: transparent;
         top: 15px;
-        padding: .5rem;
+        padding: .5rem 0;
         z-index: 1;
         border: 0;
         outline: 0;
+        font-weight: 400;
+        font-size: 1.2rem;
         color: #FFFFFF;
         border-bottom: 1px solid white;
         
@@ -73,7 +75,6 @@
     label{
         position: absolute;
         top: 20px;
-        left: .1rem;
         cursor: text;
         transition: .25s ease-in-out;
     }
@@ -81,5 +82,6 @@
 }
 
 .alert{
+    font-size: .8rem;
     color: red;
 }

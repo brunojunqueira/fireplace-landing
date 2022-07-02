@@ -1,17 +1,17 @@
 import Head from 'next/head'
 import '../styles/globals.scss'
+import sources from './sources.json'
 
-function MyApp({ Component, pageProps }) {
-  return (
+const MyApp = ({ Component, pageProps }) => (
   <>
     <Head>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-      <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"/>
+      {sources?.map((source, index) => (
+        <link key={index} href={source.href} rel={source.rel} />
+      ))}
     </Head>
     <Component {...pageProps} />
   </>
-  )
-}
+)
+
 
 export default MyApp

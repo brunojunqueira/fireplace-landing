@@ -1,12 +1,11 @@
 import useTranslation from 'next-translate/useTranslation'
-import router from 'next/router';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm, Controller, set } from 'react-hook-form';
 
 import style from './login.module.scss'
-import Main from '../../components/Main';
-import Logo from '../../components/Logo';
-import { Button } from '../../components/Button';
-import { InputText } from '../../components/InputText';
+import Main from '../../templates/Main';
+import Logo from '../../components/design/Logo';
+import { Button } from '../../components/common/Button';
+import { InputText } from '../../components/common/InputText';
 
 
 
@@ -14,28 +13,41 @@ function Login() {
 
     const { t } = useTranslation('login');
 
-    const { handleSubmit, control, setError, clearErrors, formState: { errors } } = useForm();
+    const { handleSubmit, control, setError, formState: { errors } } = useForm();
 
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
+        
+        // --Implementation--
+        //
+        //const email_exist = await api.post(data.email);
+        //if(email_exist){
+        //      try{
+        //          auth.login(data.email, data.password);
+        //      } catch {
+        //          setError('password', {message: t('passwordError')});
+        //      }
+        //} else {
+        //      setError('email', {message: t('emailerror')});
+        //}
 
-        console.log(data);
+        if(data.email != 'brunosdsj@gmail.com'){
+            setError('email', {message: t('emailerror')});
+        }
+        else{
+            if(data.password != '12345678'){
+                setError('password', {message: t('passwordError')});
+            }
+            else{
+                console.log("Success");
+            }
+        }
 
     }
 
     return(
         <Main
             title={t('login')}
-            sources={[
-            {
-                href:'https://fonts.googleapis.com/icon?family=Material+Icons', 
-                rel:'stylesheet'
-            },
-            {
-                href:'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
-                rel:'stylesheet'
-            }
-            ]}
         >
             <div className={ style.content }>
 
@@ -78,6 +90,7 @@ function Login() {
 
                     <Button
                         type='submit'
+                        className={style.form__button}
                     >
 
                         <span>

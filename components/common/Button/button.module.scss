@@ -1,0 +1,23 @@
+.buttonContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 0.35em;
+    border-radius: 0.25em;
+    width: 375px;
+    gap: 5px;
+    transition: .2s ease-in-out;
+
+    &:hover{
+        filter: brightness(0.8);
+        gap: 10px;
+    }
+
+    @media(max-width: 480px){
+        width: 80%;
+    }
+}

@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 5rem;
 
-  .main {
+  .content__main {
     width: 100%;
     flex: 1;
     display: flex;
@@ -24,79 +24,28 @@
       align-items: center;
       gap: 1rem;
 
-      .loginbtn { 
-        font-size: 1.2rem;
+      .buttons__login { 
         background: var(--alt-red) ;
-        cursor: pointer;
-        text-decoration: none;
-        color: white;
         border: none;
-        padding: 0.35em;
-        border-radius: 0.25em;
-        width: 375px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        transition: .2s ease-in-out;
-  
-        &:hover{
-          filter: brightness(0.8);
-          gap: 10px;
-        }
-  
       } 
   
-      .registerbtn{
-        font-size: 1.2rem;
+      .buttons__register{
         background: none;
-        cursor: pointer;
-        text-decoration: none;
-        color: white;
         border: white 1px solid;
-        padding: 0.35em;
-        border-radius: 0.25em;
-        width: 375px;
       }
       
-      .notnowbtn{
-        font-size: 1.2rem;
+      .buttons__not_now{
         background: none;
-        cursor: pointer;
-        text-decoration: none;
-        color: white;
-        border: white 1px solid;
-        padding: 0.35em;
         border: none;
-        font-size: 15px;
+        font-size: 1rem;
+        width: fit-content;
+
         &:hover{
           text-decoration: underline;
         }
+
       }
 
     }
-
-    .complements {
-      width: 100%;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      .infofield{
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .firegif{
-          position: absolute;
-          right: -50px;
-        }
-      }
-
-    }
-
   }
 }

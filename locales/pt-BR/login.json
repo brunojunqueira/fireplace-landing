@@ -5,6 +5,7 @@
     "remember": "Lembre-se de mim",
     "forgot": "Esqueceu a senha?",
     "emailerror":"Insira um email válido!",
-    "passwordRequired":"A senha não pode estar em branco!"
+    "passwordRequired":"A senha não pode estar em branco!",
+    "passwordError": "Senha incorreta!"
 
 }
