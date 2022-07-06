@@ -11,6 +11,11 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
+
+    @media(max-width: 1280px){
+        flex-direction: column-reverse;
+        row-gap: 2rem;
+    }
 }
 
 .item__texts{

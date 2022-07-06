@@ -18,15 +18,12 @@
   margin-bottom: 18rem;
 
   @media(max-width: 1280px){
-    column-gap: 5rem;
-  }
-
-  @media (max-width: 720px) {
     flex-direction: column;
-    
+    row-gap: 5rem;
+    margin-bottom: 13rem;
   }
 
-
+  
   
 }
 
@@ -35,7 +32,7 @@
   flex-direction: column;
 
   row-gap: 2rem;
-  width: 25rem;
+  width: 30rem;
   color: white;
   text-align: center;
 
@@ -45,14 +42,20 @@
 }
 
 .content__informations{
-
+  
 }
 
 .login_button {
   position: absolute;
   right: 2rem;
-  top: 2rem;
+  top: 1.2rem;
   max-width: 15rem;
   background: transparent;
   border: none;
+
+  @media(max-width: 720px){
+    right: .3rem;
+    top: 1rem;
+  }
+
 }
