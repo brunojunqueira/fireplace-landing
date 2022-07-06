@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
     cursor: default;
     user-select: none;
-    gap: 10px;
     
     &.clickable{
         cursor: pointer;

@@ -1,9 +1,11 @@
-import useTranslation from 'next-translate/useTranslation'
 import Logo from '../components/design/Logo'
 import Main from '../templates/Main';
 
 import style from '../styles/home.module.scss'
+import ButtonSection from '../components/landing/ButtonSection';
+import Informations from '../components/Landing/Informations';
 import { Button } from '../components/common/Button';
+import useTranslation from 'next-translate/useTranslation';
 
 export default function Home() {
 
@@ -12,29 +14,21 @@ export default function Home() {
     return (
         <Main title='Fireplace'>
             <div className={style.content}>
+                <Button 
+                    className={style.login_button} 
+                    redirectTo='/login' 
+                    rightIcon='login'
+                    text={t('login')}
+                />  
                 <div className={style.content__main}>
-                    <Logo />
-
-                    <div className={style.buttons}>
-                        <Button 
-                            className={style.buttons__login} 
-                            redirectTo='/login' 
-                            rightIcon='login' 
-                            text={t('login')} 
-                        />  
-
-                        <Button 
-                            className={style.buttons__register} 
-                            redirectTo='/register' 
-                            text={t('register')} 
-                        />                            
-                        
-                        <Button 
-                            className={style.buttons__not_now} 
-                            redirectTo='/feed' 
-                            text={t('notnow')} 
-                        />
+                    <div className={style.main__card}>
+                        <Logo />
+                        <h2>{t('slogan')}</h2>
                     </div>
+                    <ButtonSection />
+                </div>
+                <div className={style.content__informations}>
+                    <Informations />
                 </div>
             </div>
         </Main>

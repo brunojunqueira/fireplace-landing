@@ -1,5 +1,6 @@
 import Footer from "../../components/fixed/Footer"
 import Resources from "../../components/fixed/Resources"
+import Translations from "../../components/fixed/Translations"
 
 import style from './main.module.scss'
 
@@ -17,6 +18,7 @@ const Main = (props) => {
             <main
                 className={style.main}
             >
+                <Translations/>
                 { props?.children }
             </main>
             

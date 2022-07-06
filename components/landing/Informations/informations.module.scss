@@ -1,0 +1,34 @@
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.item__texts{
+    color: var(--alt-white);
+
+    word-wrap: break-word;
+
+    h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        max-width: 800px;
+    }
+}
+
+.item__image{
+    height: 18rem;
+}

@@ -1,5 +1,7 @@
 {
-    "login": "Entrar",
-    "register": "Criar Conta",
-    "notnow": "Agora não"
+    "login": "Acessar conta",
+    "register": "Crie sua conta agora",
+    "notnow": "Explore nossa comunidade",
+    "or": "ou",
+    "slogan": "Faça parte de uma incrível comunidade composta por escritores e leitores do mundo todo."
 }
