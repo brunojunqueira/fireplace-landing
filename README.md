@@ -1,9 +1,10 @@
-This is a Social Network based on Writers and Readers.
+This is a Social Network thought about unknown Writers and Readers all over the world.
 
 # Creators
 
 ## Whales&Koalas Inc.
 
-- Bruno Junqueira
-- Daniel Pelajo
-- Erick Menezes 
+### Founders
+- CEO Bruno Junqueira
+- CEO Daniel Pelajo
+- CEO Erick Menezes 
