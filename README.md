@@ -1,6 +1,6 @@
 This is a Social Network thought about unknown Writers and Readers all over the world.
 
-# Creators
+# Team
 
 ## Whales&Koalas Inc.
 
