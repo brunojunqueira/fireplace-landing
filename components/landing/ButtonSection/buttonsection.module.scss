@@ -7,10 +7,9 @@
 
     border-radius: 0.5rem;
 
-    // .buttons__register{
-    //   background: none;
-    //   border: white 1px solid;
-    // }
+    @media(max-width: 480px){
+      width: 90%
+    }
     
     .buttons__register{
       background: var(--alt-red);
