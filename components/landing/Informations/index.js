@@ -12,7 +12,7 @@ const Informations = () => {
                     className={style.item__image} 
                     src='./assets/original.gif'
                 />
-            </article>''
+            </article>
         </section>
     )
 }
