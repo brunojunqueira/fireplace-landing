@@ -7,14 +7,21 @@ import Logo from "../../components/design/Logo";
 import Main from '../../templates/Main';
 
 import style from './register.module.scss';
+import { useEffect } from "react";
 
 
 
 function Register() {
     const { t } = useTranslation('register');
-    const [daysInput, setDaysInput] = useState(() => returnDaysOfMonth());
-    const [monthsInput, setMonthsInput] = useState(() => returnMonths());
-    const [yearsInput, setYearsInput] = useState(() => returnYears());
+    const [daysInput, setDaysInput] = useState([]);
+    const [monthsInput, setMonthsInput] = useState([]);
+    const [yearsInput, setYearsInput] = useState([]);
+
+    useEffect(() => {
+        returnDaysOfMonth();
+        returnMonths();
+        returnYears();
+    }, [])
 
     const customSelectStyle = {
         option: (provided, state) => ({
@@ -25,11 +32,12 @@ function Register() {
         menu: (provided) => ({
             ...provided,
             top: '30px',
-            height: '200px',
-            overflowY: 'scroll',
             background: '#2f2f2f',
         }),
-        menuList: (provided) => ({}),
+        menuList: (provided) => ({
+            overflow: 'scroll',
+            height: '150px'
+        }),
         control: (provided, state) => ({
             ...provided,
             width: '100%',
@@ -64,7 +72,7 @@ function Register() {
             days.push({ label: i, value: i });
         }
 
-        return days;
+        setDaysInput(days);
     }
 
     function returnMonths() {
@@ -74,20 +82,20 @@ function Register() {
             months.push({ label: i, value: i });
         }
 
-        return months;
+        setMonthsInput(months);
     }
 
     function returnYears() {
         const years = [];
 
-        const currentYear = new Date();
-        let minimalYearChoice = currentYear.getUTCFullYear() - 120;
+        const currentYear = new Date().getUTCFullYear();
+        let minimalYearChoice = currentYear - 120;
 
         for (let i = minimalYearChoice; i < currentYear; i++) {
             years.push({ label: i, value: i });
         }
 
-        return years;
+        setYearsInput(years);
     }
 
     return (
@@ -166,6 +174,7 @@ function Register() {
 
                         <Select 
                             styles={customSelectStyle}
+                            className={style.yearInputStyle}
                             options={yearsInput}
                             placeholder="Ano"
                         />
