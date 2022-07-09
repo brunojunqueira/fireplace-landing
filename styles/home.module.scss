@@ -5,7 +5,14 @@
   flex-direction: column;
   gap: 5rem;
   padding-top: 18rem;
-  padding-bottom: 5%;
+  padding-bottom: 10rem;
+
+  @media(max-width: 1280px){
+    flex-direction: column;
+    row-gap: 5rem;
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+  }
 }
 
 .content__main{
@@ -15,15 +22,13 @@
   align-items: center;
   justify-content: center;
   column-gap: 15rem;
-  margin-bottom: 18rem;
+  padding-bottom: 14rem;
 
   @media(max-width: 1280px){
     flex-direction: column;
     row-gap: 5rem;
-    margin-bottom: 13rem;
+    padding-bottom: 10rem;
   }
-
-  
   
 }
 

@@ -29,10 +29,6 @@
     align-items: center;
     gap: .5rem;
     font-size: 14px;
-        
-    @media(max-width: 720px){
-        width: 60%;
-    }
 
     @media(max-width: 480px){
         width: 90%;
