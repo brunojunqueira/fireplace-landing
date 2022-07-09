@@ -49,8 +49,21 @@
         }
     }
 
+    .form__birthday_field {
+        display: grid;
+        width: 100%;
+        column-gap: 1rem;
+        grid-template-columns: repeat(1fr, 3);
+
+        @media (max-width: 720px) {
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+
     .form__button{
         background: var(--alt-red);
+        border: none;
+        margin-top: 1rem;
     }
 
 }

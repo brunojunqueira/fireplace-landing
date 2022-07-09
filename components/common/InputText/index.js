@@ -19,7 +19,7 @@ export function InputText({ label, name, error, variant = 'default', ...rest }) 
             <input
                 name={name} 
                 id={name} 
-                placeholder={variant == 'minimalist' ? variant : ''}
+                placeholder={variant === 'minimalist' ? variant : ''}
                 {...rest} 
             />
             <label
