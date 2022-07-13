@@ -5,7 +5,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     gap: 2rem;
+=======
+    gap: .5rem;
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
     animation: in-left 0.5s;
 
 }
@@ -27,15 +31,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     gap: .5rem;
     font-size: 14px;
+=======
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
 
     @media(max-width: 480px){
         width: 90%;
     }
 
+<<<<<<< HEAD
     .form__button{
         background-color: var(--alt-red);
+=======
+    .form__submit{
+        background-color: var(--alt-red);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .form__forgot{
+        background: none;
+        width: fit-content;
+        font-size: 1rem;
+        margin-top: 2rem;
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
     }
 
 }

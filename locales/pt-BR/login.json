@@ -2,7 +2,11 @@
     "login": "Entrar",
     "email": "Email",
     "password": "Senha",
+<<<<<<< HEAD
     "remember": "Lembre-se de mim",
+=======
+    "remember": "Mantenha-me conectado",
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
     "forgot": "Esqueceu a senha?",
     "emailerror":"Insira um email válido!",
     "passwordRequired":"A senha não pode estar em branco!",

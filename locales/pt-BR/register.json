@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "htmlHeadTitle": "Criar Conta",
 
     "inputRequired": "Este campo é obrigatório.",
@@ -25,4 +26,19 @@
         "confirmPasswordAlert": "As senhas devem coincidir!",
         "registerButtonText": "Cadastrar"
     }
+=======
+    "register": "Criar Conta",
+    "name": "Nome",
+    "forname": "Sobrenome",
+    "email": "E-mail",
+    "userName": "Pseudônimo",
+    "password": "Senha",
+    "confirmPassword": "Confirmar Senha",
+    "fnalert": "Insira apenas seu primeiro nome, sem espaços.",
+    "lnalert": "Insira apenas seu último nome, sem espaços.",
+    "mlalert": "Insira um email válido!",
+    "unalert": "São permitidos apenas cacteres alfanúmericos e alguns especiais ('.', '_' e '-').",
+    "pwalert": "A senha deve conter no mínimo 8 caracteres.",
+    "cpwalert": "As senhas devem coincidir!"
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
 }

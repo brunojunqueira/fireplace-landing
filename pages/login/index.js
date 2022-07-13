@@ -1,4 +1,5 @@
 import useTranslation from 'next-translate/useTranslation'
+<<<<<<< HEAD
 import { useForm, Controller, set } from 'react-hook-form';
 
 import style from './login.module.scss'
@@ -6,15 +7,37 @@ import Main from '../../templates/Main';
 import Logo from '../../components/design/Logo';
 import { Button } from '../../components/common/Button';
 import { InputText } from '../../components/common/InputText';
+=======
+import { useForm, Controller } from 'react-hook-form';
+import { useState } from 'react';
+
+import style from './login.module.scss'
+import Main from '../../layouts/Main';
+import Logo from '../../components/design/Logo';
+import { Button } from '../../components/common/Button';
+import { InputText } from '../../components/common/InputText';
+import Checkbox from '../../components/common/Checkbox';
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
 
 
 
 function Login() {
 
+<<<<<<< HEAD
+=======
+    const [remenber, setRemember] = useState(false);
+
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
     const { t } = useTranslation('login');
 
     const { handleSubmit, control, setError, formState: { errors } } = useForm();
 
+<<<<<<< HEAD
+=======
+    const onToggleCheck = (check) => {
+        setRemember(check);
+    }
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
 
     const onSubmit = async (data) => {
         
@@ -90,7 +113,11 @@ function Login() {
 
                     <Button
                         type='submit'
+<<<<<<< HEAD
                         className={style.form__button}
+=======
+                        className={style.form__submit}
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
                     >
 
                         <span>
@@ -103,6 +130,24 @@ function Login() {
 
                     </Button>
 
+<<<<<<< HEAD
+=======
+                    <Checkbox
+                        name='remember'
+                        label={t('remember')}
+                        onToggleCheck={onToggleCheck}
+                    />
+
+                    <Button
+                        type='submit'
+                        className={style.form__forgot}
+                    >
+                        <span>
+                            {t('forgot')}
+                        </span>
+                    </Button>
+
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
                 </form>
 
             </div>
@@ -110,4 +155,8 @@ function Login() {
         </Main>
     )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
 export default Login;

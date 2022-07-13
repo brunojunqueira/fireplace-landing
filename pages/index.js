@@ -1,5 +1,5 @@
 import Logo from '../components/design/Logo'
-import Main from '../templates/Main';
+import Main from '../layouts/Main';
 
 import style from '../styles/home.module.scss'
 import ButtonSection from '../components/landing/ButtonSection';

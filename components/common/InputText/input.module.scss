@@ -38,7 +38,12 @@
     flex-direction: column-reverse;
     width: 100%;
     row-gap: .2rem;
+<<<<<<< HEAD
     padding-top: 15px;
+=======
+    padding-top: 10px;
+    padding-bottom:10px ;
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
 
     font-weight: 400;
     font-size: 1.2rem;
@@ -81,6 +86,10 @@
 }
 
 .alert{
+<<<<<<< HEAD
+=======
+    height: 10px;
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
     font-size: .8rem;
     color: red;
 }

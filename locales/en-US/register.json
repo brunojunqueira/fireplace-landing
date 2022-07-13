@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "htmlHeadTitle": "Create Account",
     
     "inputRequired": "This field is required.",
@@ -25,4 +26,19 @@
         "confirmPasswordAlert": "Passwords must match!",
         "registerButtonText": "Register"
     }
+=======
+    "register": "Create Account",
+    "name": "Name",
+    "forname": "Forname",
+    "email": "E-mail",
+    "userName": "Username",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fnalert": "Insert only you first name, no spaces",
+    "lnalert": "Insert only you last name, no spaces",
+    "mlalert": "Insert a valid e-mail!",
+    "unalert": "Use only alphanumeric characters and some special ones ('.', '_' e '-').",
+    "pwalert": "Password must contain at least 8 characters.",
+    "cpwalert": "Passwords must match!"
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
 }

@@ -1,0 +1,14 @@
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content__checkbox{
+    cursor: pointer;
+}
+
+.content__label{
+    color: white;
+}

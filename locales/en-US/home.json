@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 {
     "login": "Access account",
     "register": "Sign up now",
     "notnow": "Explore our community",
     "or": "or",
     "slogan": "Be part of an awesome community made by writers and readers all over the world."
+=======
+{
+    "login": "Access account",
+    "register": "Sign up now",
+    "notnow": "Explore our community",
+    "or": "or",
+    "slogan": "Be part of an awesome community made by writers and readers all over the world."
+>>>>>>> 64b007556a2c8c7c9c5403d5df14ddd2d566d450
 }
