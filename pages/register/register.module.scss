@@ -6,7 +6,6 @@
     align-items: center;
     row-gap: 2rem;
     animation: in-left 0.5s;
-
 }
 
 @keyframes in-left {
@@ -16,6 +15,45 @@
     } to {
         transform: translate(0);
         opacity: 1;
+    }
+}
+
+.form__logo_container {
+    position: relative;
+    width: 30rem;
+
+    @media(max-width: 720px){
+        width: 60%;
+    }
+
+    @media(max-width: 480px){
+        width: 90%;
+    }
+
+    .form__back_button {
+        position: absolute;
+        top: -3.5rem;
+        left: 0;
+        width: fit-content;
+        background: transparent;
+        border-radius: 50%;
+
+        span {
+            font-size: 2rem;
+            transition: filter .2s;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
+
+            &:active {
+                filter: brightness(0.8);
+            }
+        }
+
+        @media (min-width: 720px) {
+            left: -6rem;
+        }
     }
 }
 
@@ -61,13 +99,18 @@
         .yearInputStyle {
             grid-area: birthdayInput2;
         }
+
+        @media(min-width: 600px) {
+            grid-template-areas: '. . birthdayInput2';
+        }
     }
 
     .form__button{
         background: var(--alt-red);
-        border: none;
+        font-size: 1.25rem;
         width: 100%;
-        margin-top: 1rem;
+        border: none;
+        margin-top: 2rem;
     }
 
 }
