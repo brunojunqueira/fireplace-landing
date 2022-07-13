@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 45px;
+    width: 100%;
+
+    & span{
+        font-size: 14px;
+    }
+
+    @media(max-width: 480px) {
+        flex-direction: column;
+        row-gap: .2rem;
+    }
+}
+  

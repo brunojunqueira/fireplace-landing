@@ -1,0 +1,15 @@
+{
+    "register": "Create Account",
+    "name": "Name",
+    "forname": "Forname",
+    "email": "E-mail",
+    "userName": "Username",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fnalert": "Insert only you first name, no spaces",
+    "lnalert": "Insert only you last name, no spaces",
+    "mlalert": "Insert a valid e-mail!",
+    "unalert": "Use only alphanumeric characters and some special ones ('.', '_' e '-').",
+    "pwalert": "Password must contain at least 8 characters.",
+    "cpwalert": "Passwords must match!"
+}

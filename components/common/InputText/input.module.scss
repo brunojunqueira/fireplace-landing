@@ -1,0 +1,88 @@
+.default{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    row-gap: 0.5rem;
+
+    input {
+        background: var(--alt-white);
+        padding: .5rem 1rem;
+        height: 3rem;
+        border: 0;
+        border-radius: 0.3rem;
+        outline: none;
+    
+        &:focus-visible {
+            border: 2.5px solid var(--alt-red);
+        }
+
+        &::placeholder {
+            font-weight: 500;
+            opacity: .5;
+        }
+    }
+
+    label {
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: #FFFFFF;
+    }
+
+}
+
+.minimalist{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 100%;
+    row-gap: .2rem;
+    padding-top: 10px;
+    padding-bottom:10px ;
+
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+
+    input{
+        background: transparent;
+        padding: .5rem 0;
+        z-index: 1;
+        border: 0;
+        outline: 0;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: #FFFFFF;
+        border-bottom: 1px solid white;
+        
+        &::placeholder{
+            color: transparent;
+        }
+
+        &:focus ~ label, &:not(:placeholder-shown) ~ label{
+            top: 0;
+            font-size: .8rem;
+            color: var(--lite-baby-grey);
+        }
+
+        &[type=password]::-ms-reveal, &[type=password]::-ms-clear{
+            display: none;
+        }
+
+    }
+
+    label{
+        position: absolute;
+        top: 20px;
+        cursor: text;
+        transition: .25s ease-in-out;
+    }
+
+}
+
+.alert{
+    height: 10px;
+    font-size: .8rem;
+    color: red;
+}
