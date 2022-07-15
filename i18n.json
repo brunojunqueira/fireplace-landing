@@ -4,6 +4,7 @@
     "pages":{
         "/": ["home"],
         "/login": ["login"],
-        "/register": ["register"]
+        "/register": ["register"],
+        "/login/recover": ["recover"]
     }
 }

@@ -13,9 +13,9 @@ import Checkbox from '../../components/common/Checkbox';
 
 function Login() {
 
-    const [remenber, setRemember] = useState(false);
-
     const { t } = useTranslation('login');
+
+    const [remenber, setRemember] = useState(false);
 
     const { handleSubmit, control, setError, formState: { errors } } = useForm();
 
@@ -118,6 +118,7 @@ function Login() {
 
                     <Button
                         type='submit'
+                        redirectTo='/login/recover'
                         className={style.form__forgot}
                     >
                         <span>
