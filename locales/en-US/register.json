@@ -1,15 +1,28 @@
 {
-    "register": "Create Account",
-    "name": "Name",
-    "forname": "Forname",
-    "email": "E-mail",
-    "userName": "Username",
-    "password": "Password",
-    "confirmPassword": "Confirm Password",
-    "fnalert": "Insert only you first name, no spaces",
-    "lnalert": "Insert only you last name, no spaces",
-    "mlalert": "Insert a valid e-mail!",
-    "unalert": "Use only alphanumeric characters and some special ones ('.', '_' e '-').",
-    "pwalert": "Password must contain at least 8 characters.",
-    "cpwalert": "Passwords must match!"
+    "htmlHeadTitle": "Create Account",
+    
+    "inputRequired": "This field is required.",
+
+    "step1": {
+        "namePlaceholder": "Name",
+        "fornamePlaceholder": "Forname",
+        "emailPlaceholder": "E-mail",
+        "inputDayPlaceholder": "Day",
+        "inputMonthPlaceholder": "Month",
+        "inputYearPlaceholder": "Year",
+        "nameAlert": "Insert only you first name, no spaces",
+        "fornameAlert": "Insert only you last name, no spaces",
+        "emailAlert": "Insert a valid e-mail!",
+        "unalert": "Use only alphanumeric characters and some special ones ('.', '_' e '-').",
+        "nextButtonText": "Next"
+    },
+
+    "step2": {
+        "usernamePlaceholder": "Username",
+        "passwordPlaceholder": "Password",
+        "confirmPasswordPlaceholder": "Confirm Password",
+        "passwordAlert": "Password must contain at least 8 characters.",
+        "confirmPasswordAlert": "Passwords must match!",
+        "registerButtonText": "Register"
+    }
 }

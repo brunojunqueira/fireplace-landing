@@ -5,7 +5,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .5rem;
     animation: in-left 0.5s;
 
 }
@@ -21,7 +20,8 @@
 }
 
 .form{
-    padding: 1.5rem;
+    margin-top: 2rem;
+    padding: .5rem;
     border-radius: 1rem;
     width: 30rem;
     display: flex;
@@ -37,12 +37,11 @@
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
+}
 
-    .form__forgot{
-        background: none;
-        width: fit-content;
-        font-size: 1rem;
-        margin-top: 2rem;
-    }
-
+.content__forgot{
+    background: none;
+    width: fit-content;
+    font-size: 1rem;
+    margin-top: 2rem;
 }

@@ -79,6 +79,7 @@ function Recover(){
                 {
                     part == 2 &&
                     <Spinner 
+                        className={style.content__spinner}
                         size="2"
                     />
                 }

@@ -1,5 +1,6 @@
 {
     "recover": "Recover Password",
     "label": "We'll send you an email with instructions to recover your password.",
-    "send": "Send"
+    "send": "Send",
+    "emailerror":"Insert a valid email!"
 }

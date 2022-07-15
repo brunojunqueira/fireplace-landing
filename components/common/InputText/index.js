@@ -1,6 +1,6 @@
 import style from './input.module.scss';
 
-export function InputText({ label, name, error, placeholder, variant = 'default', ...rest }) {
+export function InputText({ label, name, error, variant = 'default', ...rest }) {
 
     function setVariant(v){
         switch(v){
@@ -19,7 +19,7 @@ export function InputText({ label, name, error, placeholder, variant = 'default'
             <input
                 name={name} 
                 id={name} 
-                placeholder={ variant === 'minimalist' ? " " : placeholder }
+                placeholder={ variant === 'minimalist' && " " }
                 {...rest} 
             />
             <label

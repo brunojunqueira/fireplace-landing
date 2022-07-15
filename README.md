@@ -5,6 +5,6 @@ This is a Social Network thought about unknown Writers and Readers all over the 
 ## Whales&Koalas Inc.
 
 ### Founders
-- CEO Bruno Junqueira
-- CEO Daniel Pelajo
-- CEO Erick Menezes 
+- Quality Assurance & CEO Bruno Junqueira
+- Backend Chief & CEO Daniel Pelajo
+- Frontend Chief & CEO Erick Menezes 

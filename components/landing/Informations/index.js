@@ -12,7 +12,7 @@ const Informations = () => {
             <article className={style.item}>
                 <div className={style.item__texts}>
                     <h2>{t('text1')}</h2>
-                    <h3>{t('subitle1')}</h3>
+                    <p>{t('subitle1')}</p>
                 </div>
                 <img 
                     className={style.item__image} 
@@ -22,7 +22,7 @@ const Informations = () => {
             <article className={`${style.item} ${style.alt}`}>
                 <div className={style.item__texts}>
                     <h2>{t('text2')}</h2>
-                    <h3>{t('subitle2')}</h3>
+                    <p>{t('subitle2')}</p>
                 </div>
                 <img 
                     className={style.item__image} 
@@ -32,7 +32,7 @@ const Informations = () => {
             <article className={style.item}>
                 <div className={style.item__texts}>
                     <h2>{t('text3')}</h2>
-                    <h3>{t('subitle3')}</h3>
+                    <p>{t('subitle3')}</p>
                 </div>
                 <img 
                     className={style.item__image} 

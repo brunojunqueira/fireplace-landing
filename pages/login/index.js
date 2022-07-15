@@ -110,28 +110,26 @@ function Login() {
 
                     </Button>
 
-                    <Checkbox
-                        name='remember'
-                        label={t('remember')}
-                        onToggleCheck={onToggleCheck}
-                    />
-
-                    <Button
-                        type='submit'
-                        redirectTo='/login/recover'
-                        className={style.form__forgot}
-                    >
-                        <span>
-                            {t('forgot')}
-                        </span>
-                    </Button>
-
                 </form>
+
+                <Checkbox
+                    name='remember'
+                    label={t('remember')}
+                    onToggleCheck={onToggleCheck}
+                />
+
+                <Button
+                    redirectTo='/login/recover'
+                    className={style.content__forgot}
+                >
+                    <span>
+                        {t('forgot')}
+                    </span>
+                </Button>
 
             </div>
 
         </Main>
     )
 }
-
 export default Login;
