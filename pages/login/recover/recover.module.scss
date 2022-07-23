@@ -7,6 +7,10 @@
     animation: in-left 0.5s;
     column-gap: 2rem;
 
+    .content__spinner{
+        margin-top: 4rem;
+    }
+
 }
 
 @keyframes in-left {
@@ -43,8 +47,4 @@
         margin-bottom: 1rem;
     }
 
-}
-
-.content__spinner{
-    margin-top: 5rem;
 }

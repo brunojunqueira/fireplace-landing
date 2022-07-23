@@ -8,11 +8,13 @@ import style from "./recover.module.scss";
 import Logo from "../../../components/design/Logo";
 import { Button } from "../../../components/common/Button";
 import { InputText } from "../../../components/common/InputText";
-import Spinner from "../../../components/design/Spinner";
+import { Spinner } from "../../../components/design/Spinner";
 
 function Recover(){
 
     const [part, setPart] = useState(1);
+    const [loading, setLoading] = useState(true);
+    const [success, setSuccess] = useState(false);
 
     const { t } = useTranslation('recover');
 
@@ -24,7 +26,16 @@ function Recover(){
 
         if(data.email == 'brunosdsj@gmail.com'){
             setTimeout(()=>{
-                setPart(3);
+                setLoading(false);
+                setSuccess(true);
+            }, 5000)
+        }
+        else{
+            setTimeout(()=>{
+                setPart(1);
+                setLoading(true);
+                setSuccess(false);
+                setError('email',{message:'Ocorreu um erro'});
             }, 5000)
         }
 
@@ -77,11 +88,15 @@ function Recover(){
                     </form>
                 }
                 {
-                    part == 2 &&
-                    <Spinner 
-                        className={style.content__spinner}
-                        size="2"
-                    />
+                    part == 2 && (
+                        <Spinner 
+                            size="8"
+                            className={style.content__spinner}
+                            loading={ loading }
+                            success={ success }
+                            successLabel = {t('success')}
+                        />
+                    )
                 }
             </div>
 
