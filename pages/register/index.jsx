@@ -3,15 +3,15 @@ import router from "next/router";
 
 import useTranslation from "next-translate/useTranslation";
 
-import Main from "../../layouts/Main";
-import Step1Form from 'components/register/Step1RegisterForm';
-import Step2Form from 'components/register/Step2RegisterForm';
-import Logo from "components/design/Logo";
+import { Main } from "../../layouts/Main";
+import { Step1RegisterForm } from "components/register/Step1RegisterForm";
+import { Step2RegisterForm } from "components/register/Step2RegisterForm";
+import { Logo } from "components/design/Logo";
 import { Button } from "components/common/Button";
 
 import style from './register.module.scss';
 
-function Register() {
+function Register () {
     const { t } = useTranslation('register');
     const [formInputData, setFormInputData] = useState({
         name: '',
@@ -21,15 +21,16 @@ function Register() {
         birthdayMonth: '',
         birthdayYear: '',
         pseudonym: '',
-        password: '',
+        password: ''
     });
+
     const [isStep1Completed, setIsStep1Completed] = useState(false);
 
-    function handleSubmitFormInputData() {
+    function handleSubmitFormInputData () {
         console.log('formInputData', formInputData);
     }
 
-    function handleGoBackPage() {
+    function handleGoBackPage () {
         if (isStep1Completed) {
             console.log('veio aqui');
             setIsStep1Completed(false);
@@ -47,13 +48,13 @@ function Register() {
                 <Logo />
             </div>
             {!isStep1Completed ? (
-                <Step1Form 
+                <Step1RegisterForm
                     formInputData={formInputData}
                     setFormInputData={setFormInputData}
                     setIsStep1Completed={setIsStep1Completed}
                 />
             ) : (
-                <Step2Form 
+                <Step2RegisterForm
                     formInputData={formInputData}
                     setFormInputData={setFormInputData}
                     handleSubmitFormInputData={handleSubmitFormInputData}

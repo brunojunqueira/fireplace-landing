@@ -2,16 +2,15 @@ import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import useTranslation from "next-translate/useTranslation";
 
-import Main from "../../../layouts/Main";
+import { Main } from "../../../layouts/Main";
 import style from "./recover.module.scss";
 
-import Logo from "../../../components/design/Logo";
+import { Logo } from "../../../components/design/Logo";
 import { Button } from "../../../components/common/Button";
 import { InputText } from "../../../components/common/InputText";
 import { Spinner } from "../../../components/design/Spinner";
 
-function Recover(){
-
+function Recover() {
     const [part, setPart] = useState(1);
     const [loading, setLoading] = useState(true);
     const [success, setSuccess] = useState(false);
@@ -21,27 +20,24 @@ function Recover(){
     const { handleSubmit, control, setError, formState: { errors } } = useForm();
 
     const onSubmit = async (data) => {
-
         setPart(2);
 
-        if(data.email == 'brunosdsj@gmail.com'){
-            setTimeout(()=>{
+        if (data.email === 'brunosdsj@gmail.com') {
+            setTimeout(() => {
                 setLoading(false);
                 setSuccess(true);
-            }, 5000)
-        }
-        else{
-            setTimeout(()=>{
+            }, 5000);
+        } else {
+            setTimeout(() => {
                 setPart(1);
                 setLoading(true);
                 setSuccess(false);
-                setError('email',{message:'Ocorreu um erro'});
-            }, 5000)
+                setError('email', { message: 'Ocorreu um erro' });
+            }, 5000);
         }
+    };
 
-    }
-
-    return(
+    return (
         <Main
             title={t('recover')}
         >
@@ -49,16 +45,16 @@ function Recover(){
 
                 <Logo />
 
-                {part == 1 && 
-                    <form 
+                {part === 1 &&
+                    <form
                         className={style.form}
                         onSubmit={handleSubmit(onSubmit)}
                     >
 
-                        <Controller 
+                        <Controller
                             control={control}
                             name='email'
-                            render={ ({ field : { onChange }} ) => (
+                            render={ ({ field: { onChange } }) => (
                                 <InputText
                                     type='email'
                                     variant='minimalist'
@@ -67,7 +63,7 @@ function Recover(){
                                     error={errors?.email}
                                 />
                             )}
-                            rules={{required: t('emailerror')}}
+                            rules={{ required: t('emailerror') }}
                         />
 
                         <span
@@ -88,8 +84,8 @@ function Recover(){
                     </form>
                 }
                 {
-                    part == 2 && (
-                        <Spinner 
+                    part === 2 && (
+                        <Spinner
                             size="8"
                             className={style.content__spinner}
                             loading={ loading }
@@ -101,7 +97,7 @@ function Recover(){
             </div>
 
         </Main>
-    )
+    );
 }
 
-export default Recover
+export default Recover;

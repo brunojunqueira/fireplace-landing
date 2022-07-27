@@ -1,13 +1,12 @@
 import { useRouter } from 'next/router';
 import Link from 'next/dist/client/link';
 
-import style from './translations.module.scss'
+import style from './translations.module.scss';
 
-const Translations = () => {
+export function Translations() {
+    const router = useRouter();
 
-    let router = useRouter();
-
-    return(
+    return (
         <ul className={style.language_list}>
             <span className="material-symbols-outlined">
                 language
@@ -22,7 +21,5 @@ const Translations = () => {
                 </li>
             ))}
         </ul>
-    )
+    );
 }
-
-export default Translations;

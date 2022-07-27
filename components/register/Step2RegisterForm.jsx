@@ -1,15 +1,16 @@
 import useTranslation from "next-translate/useTranslation";
 
 import { Controller, useForm } from "react-hook-form";
+import PropTypes from 'prop-types';
 
 import { Button } from "../../components/common/Button";
 import { InputText } from "../../components/common/InputText";
 
 import style from 'pages/register/register.module.scss';
 
-function Step2RegisterForm({ formInputData, setFormInputData, handleSubmitFormInputData }) {
+export function Step2RegisterForm({ formInputData, setFormInputData, handleSubmitFormInputData }) {
     const { t } = useTranslation('register');
-    const { handleSubmit, control, setError, formState: { errors } } = useForm();
+    const { handleSubmit, control } = useForm();
 
     function handleSubmitRegister(model) {
         setFormInputData({
@@ -23,11 +24,11 @@ function Step2RegisterForm({ formInputData, setFormInputData, handleSubmitFormIn
     return (
         <main className={style.content}>
             <form onSubmit={handleSubmit(handleSubmitRegister)} className={style.form}>
-                <Controller 
+                <Controller
                     control={control}
                     name='pseudonym'
                     render={ ({ field: { onChange } }) => (
-                        <InputText 
+                        <InputText
                             onChange={onChange}
                             label={t('step2.usernamePlaceholder')}
                             variant="minimalist"
@@ -38,24 +39,15 @@ function Step2RegisterForm({ formInputData, setFormInputData, handleSubmitFormIn
                         />
                     )}
                     rules={{
-                        required: t('inputRequired') 
+                        required: t('inputRequired')
                     }}
                 />
-                
-                {/* <InputText 
-                    label={t('step2.usernamePlaceholder')}
-                    variant="minimalist"
-                    type="text"
-                    name="pseudonym"
-                    id="pseudonym"
-                    required
-                /> */}
-                
-                <Controller 
+
+                <Controller
                     control={control}
                     name='password'
                     render={ ({ field: { onChange } }) => (
-                        <InputText 
+                        <InputText
                             onChange={onChange}
                             label={t('step2.passwordPlaceholder')}
                             variant="minimalist"
@@ -66,24 +58,15 @@ function Step2RegisterForm({ formInputData, setFormInputData, handleSubmitFormIn
                         />
                     )}
                     rules={{
-                        required: t('inputRequired') 
+                        required: t('inputRequired')
                     }}
                 />
 
-                {/* <InputText 
-                    label={t('step2.passwordPlaceholder')}
-                    variant="minimalist"
-                    type="password"
-                    name="password"
-                    id="password"
-                    required
-                /> */}
-
-                <Controller 
+                <Controller
                     control={control}
                     name='confirmPassword'
                     render={ ({ field: { onChange } }) => (
-                        <InputText 
+                        <InputText
                             onChange={onChange}
                             label={t('step2.confirmPasswordPlaceholder')}
                             variant="minimalist"
@@ -94,21 +77,12 @@ function Step2RegisterForm({ formInputData, setFormInputData, handleSubmitFormIn
                         />
                     )}
                     rules={{
-                        required: t('inputRequired') 
+                        required: t('inputRequired')
                     }}
                 />
 
-                {/* <InputText 
-                    label={t('step2.confirmPasswordPlaceholder')}
-                    variant="minimalist"
-                    type="password"
-                    name="confirmPassword"
-                    id="confirmPassword"
-                    required
-                /> */}
-
-                <Button 
-                    type="submit" 
+                <Button
+                    type="submit"
                     text={t('step2.registerButtonText')}
                     className={style.form__button}
                 />
@@ -117,4 +91,8 @@ function Step2RegisterForm({ formInputData, setFormInputData, handleSubmitFormIn
     );
 }
 
-export default Step2RegisterForm;
+Step2RegisterForm.propTypes = {
+    formInputData: PropTypes.object.isRequired,
+    setFormInputData: PropTypes.func.isRequired,
+    handleSubmitFormInputData: PropTypes.func.isRequired
+};

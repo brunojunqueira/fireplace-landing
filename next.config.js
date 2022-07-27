@@ -5,6 +5,6 @@ module.exports = {
   reactStrictMode: false,
   ...nextTranslate(),
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
-}
+    includePaths: [path.join(__dirname, 'styles')]
+  }
+};
