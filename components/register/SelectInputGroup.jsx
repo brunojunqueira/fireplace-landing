@@ -95,15 +95,15 @@ export function SelectInputGroup({ control }) {
         <div className={style.form__birthday_field}>
             <Controller
                 control={control}
-                name="birthdayDay"
+                name="birthDay"
                 render={ ({ field: { onChange } }) => (
                     <Select
-                        onChange={onChange}
+                        onChange={value => onChange(value.label)}
                         styles={customSelectStyle}
                         options={daysInput}
                         placeholder={t('step1.inputDayPlaceholder')}
-                        name="birthdayDay"
-                        id="birthdayDay"
+                        name="birthDay"
+                        id="birthDay"
                     />
                 )}
                 rules={{
@@ -113,15 +113,15 @@ export function SelectInputGroup({ control }) {
 
             <Controller
                 control={control}
-                name="birthdayMonth"
+                name="birthMonth"
                 render={ ({ field: { onChange } }) => (
                     <Select
-                        onChange={onChange}
+                        onChange={value => onChange(value.label)}
                         styles={customSelectStyle}
                         options={monthsInput}
                         placeholder={t('step1.inputMonthPlaceholder')}
-                        name="birthdayMonth"
-                        id="birthdayMonth"
+                        name="birthMonth"
+                        id="birthMonth"
                     />
                 )}
                 rules={{
@@ -131,15 +131,15 @@ export function SelectInputGroup({ control }) {
 
             <Controller
                 control={control}
-                name="birthdayYear"
+                name="birthYear"
                 render={ ({ field: { onChange } }) => (
                     <Select
-                        onChange={onChange}
+                        onChange={value => onChange(value.label)}
                         styles={customSelectStyle}
                         options={yearsInput}
                         placeholder={t('step1.inputYearPlaceholder')}
-                        name="birthdayYear"
-                        id="birthdayYear"
+                        name="birthYear"
+                        id="birthYear"
                         className={style.yearInputStyle}
                     />
                 )}

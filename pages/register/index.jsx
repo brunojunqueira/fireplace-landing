@@ -1,13 +1,10 @@
 import { useState } from "react";
-import router from "next/router";
-
 import useTranslation from "next-translate/useTranslation";
 
 import { Main } from "../../layouts/Main";
 import { Step1RegisterForm } from "components/register/Step1RegisterForm";
 import { Step2RegisterForm } from "components/register/Step2RegisterForm";
 import { Logo } from "components/design/Logo";
-import { Button } from "components/common/Button";
 
 import style from './register.module.scss';
 
@@ -17,9 +14,7 @@ function Register () {
         name: '',
         forname: '',
         email: '',
-        birthdayDay: '',
-        birthdayMonth: '',
-        birthdayYear: '',
+        birthDate: '',
         pseudonym: '',
         password: ''
     });
@@ -30,21 +25,9 @@ function Register () {
         console.log('formInputData', formInputData);
     }
 
-    function handleGoBackPage () {
-        if (isStep1Completed) {
-            console.log('veio aqui');
-            setIsStep1Completed(false);
-        } else {
-            router.push('/');
-        }
-    }
-
     return (
         <Main title={t('htmlHeadTitle')}>
             <div className={style.form__logo_container}>
-                <Button className={style.form__back_button} onClick={handleGoBackPage}>
-                    <span className="material-symbols-outlined">arrow_back</span>
-                </Button>
                 <Logo />
             </div>
             {!isStep1Completed ? (

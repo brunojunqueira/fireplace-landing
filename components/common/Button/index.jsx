@@ -44,7 +44,7 @@ export function Button({
 Button.propTypes = {
     children: PropTypes.node,
     text: PropTypes.string,
-    className: PropTypes.object,
+    className: PropTypes.string,
     redirectTo: PropTypes.string,
     onClick: PropTypes.func,
     iconVariant: PropTypes.string,

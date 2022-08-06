@@ -13,8 +13,16 @@ export function Step1RegisterForm ({ formInputData, setFormInputData, setIsStep1
     const { t } = useTranslation('register');
     const { handleSubmit, control } = useForm();
 
+    // Validar campos de formulário no geral
+    // Validar select de data para permitir apenas usuários de 18 anos acima
+
     function handleSubmitStep1RegisterForm (model) {
-        console.log('model step 1', model);
+        model = {
+            name: model.name,
+            forname: model.forname,
+            email: model.email,
+            birthDate: `${model.birthYear}/${model.birthMonth}/${model.birthDay}`
+        };
 
         setFormInputData({
             ...formInputData,
