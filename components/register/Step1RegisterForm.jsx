@@ -1,6 +1,8 @@
 import useTranslation from "next-translate/useTranslation";
 
 import { Controller, useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 import PropTypes from 'prop-types';
 
 import { Button } from "components/common/Button";
@@ -9,27 +11,39 @@ import { SelectInputGroup } from "./SelectInputGroup";
 
 import style from 'pages/register/register.module.scss';
 
-export function Step1RegisterForm ({ formInputData, setFormInputData, setIsStep1Completed }) {
+export function Step1RegisterForm ({ setIsStep1Completed, setRegisteredAccountId }) {
     const { t } = useTranslation('register');
-    const { handleSubmit, control } = useForm();
 
-    // Validar campos de formulário no geral
-    // Validar select de data para permitir apenas usuários de 18 anos acima
+    const schema = yup.object().shape({
+        name: yup.string().strict().trim(t('step1.nameAlert')).required(t('inputRequired')),
+        forname: yup.string().strict().trim(t('step1.fornameAlert')).required(t('inputRequired')),
+        email: yup.string().email(t('step1.emailAlert')).required(t('inputRequired')),
+        birthYear: yup.number().min(1902).max(2006, t('step1.maxYearExceeded')).required(t('inputRequired')),
+        birthMonth: yup.number().required(t('inputRequired')),
+        birthDay: yup.number().required(t('inputRequired')),
+    }).required();
 
-    function handleSubmitStep1RegisterForm (model) {
-        model = {
-            name: model.name,
-            forname: model.forname,
-            email: model.email,
-            birthDate: `${model.birthYear}/${model.birthMonth}/${model.birthDay}`
-        };
+    const { handleSubmit, control, formState: { errors } } = useForm({
+        resolver: yupResolver(schema),
+    });
 
-        setFormInputData({
-            ...formInputData,
-            ...model
-        });
+    async function handleSubmitStep1RegisterForm (model) {
+        try {
+            model = {
+                name: model.name,
+                forname: model.forname,
+                email: model.email,
+                birthDate: `${model.birthYear}/${model.birthMonth}/${model.birthDay}`
+            };
 
-        setIsStep1Completed(true);
+            // const { data: response } = await api.post('/register-endpoint', model);
+
+            // setRegisteredAccountId(response.id);
+
+            setIsStep1Completed(true);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
@@ -51,12 +65,9 @@ export function Step1RegisterForm ({ formInputData, setFormInputData, setIsStep1
                                 type="text"
                                 name="name"
                                 id="name"
-                                required
+                                error={errors?.name}
                             />
                         )}
-                        rules={{
-                            required: t('inputRequired')
-                        }}
                     />
 
                     <Controller
@@ -70,12 +81,9 @@ export function Step1RegisterForm ({ formInputData, setFormInputData, setIsStep1
                                 type="text"
                                 name="forname"
                                 id="forname"
-                                required
+                                error={errors?.forname}
                             />
                         )}
-                        rules={{
-                            required: t('inputRequired')
-                        }}
                     />
                 </div>
 
@@ -90,15 +98,12 @@ export function Step1RegisterForm ({ formInputData, setFormInputData, setIsStep1
                                 type="text"
                                 name="email"
                                 id="email"
-                                required
+                                error={errors?.email}
                             />
                         )}
-                        rules={{
-                            required: t('inputRequired')
-                        }}
                 />
 
-                <SelectInputGroup control={control} />
+                <SelectInputGroup control={control} formErrors={errors} />
 
                 <Button
                     type="submit"
@@ -111,7 +116,6 @@ export function Step1RegisterForm ({ formInputData, setFormInputData, setIsStep1
 }
 
 Step1RegisterForm.propTypes = {
-    formInputData: PropTypes.object.isRequired,
-    setFormInputData: PropTypes.func.isRequired,
-    setIsStep1Completed: PropTypes.func.isRequired
+    setIsStep1Completed: PropTypes.func.isRequired,
+    setRegisteredAccountId: PropTypes.func.isRequired,
 };

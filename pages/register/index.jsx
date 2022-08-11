@@ -10,20 +10,8 @@ import style from './register.module.scss';
 
 function Register () {
     const { t } = useTranslation('register');
-    const [formInputData, setFormInputData] = useState({
-        name: '',
-        forname: '',
-        email: '',
-        birthDate: '',
-        pseudonym: '',
-        password: ''
-    });
-
+    const [registeredAccountId, setRegisteredAccountId] = useState(0);
     const [isStep1Completed, setIsStep1Completed] = useState(false);
-
-    function handleSubmitFormInputData () {
-        console.log('formInputData', formInputData);
-    }
 
     return (
         <Main title={t('htmlHeadTitle')}>
@@ -32,15 +20,12 @@ function Register () {
             </div>
             {!isStep1Completed ? (
                 <Step1RegisterForm
-                    formInputData={formInputData}
-                    setFormInputData={setFormInputData}
                     setIsStep1Completed={setIsStep1Completed}
+                    setRegisteredAccountId={setRegisteredAccountId}
                 />
             ) : (
                 <Step2RegisterForm
-                    formInputData={formInputData}
-                    setFormInputData={setFormInputData}
-                    handleSubmitFormInputData={handleSubmitFormInputData}
+                    registeredAccountId={registeredAccountId}
                 />
             )}
         </Main>

@@ -1,6 +1,8 @@
 import useTranslation from "next-translate/useTranslation";
 
 import { Controller, useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import PropTypes from 'prop-types';
 
 import { Button } from "../../components/common/Button";
@@ -8,17 +10,25 @@ import { InputText } from "../../components/common/InputText";
 
 import style from 'pages/register/register.module.scss';
 
-export function Step2RegisterForm({ formInputData, setFormInputData, handleSubmitFormInputData }) {
+export function Step2RegisterForm({ registeredAccountId }) {
     const { t } = useTranslation('register');
-    const { handleSubmit, control } = useForm();
+
+    const schema = yup.object().shape({
+        pseudonym: yup.string().strict().trim(t('step2.usernameAlert')).matches(/[a-zA-Z\\.,_-]{3,}/, t('step2.usernameAlert')).required(t('inputRequired')),
+        password: yup.string().strict().trim(t('step2.passwordAlert')).min(8, t('step2.passwordAlert')).required(t('inputRequired')),
+        confirmPassword: yup.string().oneOf([yup.ref('password'), null], t('step2.confirmPasswordAlert')).required(t('inputRequired')),
+    }).required();
+
+    const { handleSubmit, control, formState: { errors } } = useForm({
+        resolver: yupResolver(schema),
+    });
 
     function handleSubmitRegister(model) {
-        setFormInputData({
-            ...formInputData,
-            ...model
-        });
-
-        handleSubmitFormInputData();
+        try {
+            // await api.put(`/register-endpoint/${registeredAccountId}`, model);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
@@ -35,12 +45,9 @@ export function Step2RegisterForm({ formInputData, setFormInputData, handleSubmi
                             type="text"
                             name="pseudonym"
                             id="pseudonym"
-                            required
+                            error={errors?.pseudonym}
                         />
                     )}
-                    rules={{
-                        required: t('inputRequired')
-                    }}
                 />
 
                 <Controller
@@ -54,12 +61,9 @@ export function Step2RegisterForm({ formInputData, setFormInputData, handleSubmi
                             type="password"
                             name="password"
                             id="password"
-                            required
+                            error={errors?.password}
                         />
                     )}
-                    rules={{
-                        required: t('inputRequired')
-                    }}
                 />
 
                 <Controller
@@ -73,12 +77,9 @@ export function Step2RegisterForm({ formInputData, setFormInputData, handleSubmi
                             type="password"
                             name="confirmPassword"
                             id="confirmPassword"
-                            required
+                            error={errors?.confirmPassword}
                         />
                     )}
-                    rules={{
-                        required: t('inputRequired')
-                    }}
                 />
 
                 <Button
@@ -92,7 +93,5 @@ export function Step2RegisterForm({ formInputData, setFormInputData, handleSubmi
 }
 
 Step2RegisterForm.propTypes = {
-    formInputData: PropTypes.object.isRequired,
-    setFormInputData: PropTypes.func.isRequired,
-    handleSubmitFormInputData: PropTypes.func.isRequired
+    registeredAccountId: PropTypes.number.isRequired,
 };

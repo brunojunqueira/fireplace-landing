@@ -13,7 +13,7 @@
         "nameAlert": "Insert only you first name, no spaces",
         "fornameAlert": "Insert only you last name, no spaces",
         "emailAlert": "Insert a valid e-mail!",
-        "unalert": "Use only alphanumeric characters and some special ones ('.', '_' e '-').",
+        "maxYearExceeded": "Age must be 16 or older.",
         "nextButtonText": "Next"
     },
 
@@ -21,7 +21,8 @@
         "usernamePlaceholder": "Username",
         "passwordPlaceholder": "Password",
         "confirmPasswordPlaceholder": "Confirm Password",
-        "passwordAlert": "Password must contain at least 8 characters.",
+        "usernameAlert": "Use only alphanumeric characters and some special ones ('.', '_' e '-').",
+        "passwordAlert": "Password must contain at least 8 characters and no spaces.",
         "confirmPasswordAlert": "Passwords must match!",
         "registerButtonText": "Register"
     }

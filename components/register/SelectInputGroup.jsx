@@ -4,11 +4,11 @@ import useTranslation from "next-translate/useTranslation";
 import { Controller } from "react-hook-form";
 import PropTypes from 'prop-types';
 
-import Select from "react-select";
+import { InputSelect } from "components/common/InputSelect";
 
 import style from 'pages/register/register.module.scss';
 
-export function SelectInputGroup({ control }) {
+export function SelectInputGroup({ control, formErrors }) {
     const { t } = useTranslation('register');
 
     const [daysInput, setDaysInput] = useState([]);
@@ -97,43 +97,39 @@ export function SelectInputGroup({ control }) {
                 control={control}
                 name="birthDay"
                 render={ ({ field: { onChange } }) => (
-                    <Select
+                    <InputSelect
                         onChange={value => onChange(value.label)}
                         styles={customSelectStyle}
                         options={daysInput}
                         placeholder={t('step1.inputDayPlaceholder')}
                         name="birthDay"
                         id="birthDay"
+                        error={formErrors?.birthDay}
                     />
                 )}
-                rules={{
-                    required: t('inputRequired')
-                }}
             />
 
             <Controller
                 control={control}
                 name="birthMonth"
                 render={ ({ field: { onChange } }) => (
-                    <Select
+                    <InputSelect
                         onChange={value => onChange(value.label)}
                         styles={customSelectStyle}
                         options={monthsInput}
                         placeholder={t('step1.inputMonthPlaceholder')}
                         name="birthMonth"
                         id="birthMonth"
+                        error={formErrors?.birthMonth}
                     />
                 )}
-                rules={{
-                    required: t('inputRequired')
-                }}
             />
 
             <Controller
                 control={control}
                 name="birthYear"
                 render={ ({ field: { onChange } }) => (
-                    <Select
+                    <InputSelect
                         onChange={value => onChange(value.label)}
                         styles={customSelectStyle}
                         options={yearsInput}
@@ -141,16 +137,15 @@ export function SelectInputGroup({ control }) {
                         name="birthYear"
                         id="birthYear"
                         className={style.yearInputStyle}
+                        error={formErrors?.birthYear}
                     />
                 )}
-                rules={{
-                    required: t('inputRequired')
-                }}
             />
         </div>
     );
 }
 
 SelectInputGroup.propTypes = {
-    control: PropTypes.any.isRequired
+    control: PropTypes.any.isRequired,
+    formErrors: PropTypes.object.isRequired,
 };

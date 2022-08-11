@@ -10,10 +10,11 @@
         "inputDayPlaceholder": "Dia",
         "inputMonthPlaceholder": "Mês",
         "inputYearPlaceholder": "Ano",
+        "fieldRequired": "Este campo é obrigatório.",
         "nameAlert": "Insira apenas seu primeiro nome, sem espaços.",
         "fornameAlert": "Insira apenas seu último nome, sem espaços.",
         "emailAlert": "Insira um email válido!",
-        "unalert": "São permitidos apenas cacteres alfanúmericos e alguns especiais ('.', '_' e '-').",
+        "maxYearExceeded": "Idade deve ser 16 anos acima.",
         "nextButtonText": "Próximo"
     },
 
@@ -21,7 +22,8 @@
         "usernamePlaceholder": "Pseudônimo",
         "passwordPlaceholder": "Senha",
         "confirmPasswordPlaceholder": "Confirmar Senha",
-        "passwordAlert": "A senha deve conter no mínimo 8 caracteres.",
+        "usernameAlert": "São permitidos apenas cacteres alfanúmericos e alguns especiais ('.', '_' e '-').",
+        "passwordAlert": "A senha deve conter no mínimo 8 caracteres e sem espaços.",
         "confirmPasswordAlert": "As senhas devem coincidir!",
         "registerButtonText": "Cadastrar"
     }
