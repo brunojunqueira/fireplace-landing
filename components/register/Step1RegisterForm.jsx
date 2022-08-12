@@ -30,10 +30,9 @@ export function Step1RegisterForm ({ setIsStep1Completed, setRegisteredAccountId
     async function handleSubmitStep1RegisterForm (model) {
         try {
             model = {
-                name: model.name,
-                forname: model.forname,
+                name: `${model.name} ${model.forname}`,
                 email: model.email,
-                birthDate: `${model.birthYear}/${model.birthMonth}/${model.birthDay}`
+                birthdate: `${model.birthYear}-${model.birthMonth}-${model.birthDay}`
             };
 
             // const { data: response } = await api.post('/register-endpoint', model);

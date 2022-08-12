@@ -25,6 +25,11 @@ export function Step2RegisterForm({ registeredAccountId }) {
 
     function handleSubmitRegister(model) {
         try {
+            model = {
+                pseudonym: model.pseudonym,
+                password: model.password,
+            };
+
             // await api.put(`/register-endpoint/${registeredAccountId}`, model);
         } catch (error) {
             console.log(error);
