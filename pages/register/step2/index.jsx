@@ -42,10 +42,6 @@ export default function Step2() {
         if (guid) {
             checkGuidValidation();
         }
-
-        // else {
-        //     checkPreRegistration();
-        // }
     }, [guid]);
 
     async function checkGuidValidation() {
@@ -67,26 +63,6 @@ export default function Step2() {
             }
         }
     }
-
-    // async function checkPreRegistration() {
-    //     const step1DataJwtToken = localStorage.getItem('fireplace-reg1');
-
-    //     if (!step1DataJwtToken) {
-    //         return router.push('/register/step1');
-    //     }
-
-    //     // const { data: preRegisteredUserId } = await api.get(`/user-route?jwt=${step1DataJwtToken}`);
-    //     const preRegisteredUserId = 1;
-
-    //     if (!preRegisteredUserId) {
-    //         return router.push('/register/step1');
-    //     }
-
-    //     setRegisteredAccountId(preRegisteredUserId);
-    // }
-
-    // Transformar steps em novas rotas
-    // No fim do envio da primeira, aparecer aviso que foi enviado mensagem por e-mail para confirmação
 
     function handleSubmitRegister(model) {
         try {

@@ -44,12 +44,6 @@ export default function Step1 () {
 
             // const { data: response } = await api.post('/signup', model);
 
-            // const response = {
-            //     jwtData: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQHRlc3RlLmNvbSJ9.4Yj6jhuhYe4Jy-L8ueWWWnAV2g0S2xZCOE1AbUP-crA'
-            // };
-
-            // localStorage.setItem('fireplace-reg1', response.jwtData);
-
             setIsStep1Completed(true);
         } catch (error) {
             console.log(error);
