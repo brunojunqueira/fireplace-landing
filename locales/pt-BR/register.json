@@ -15,7 +15,8 @@
         "fornameAlert": "Insira apenas seu último nome, sem espaços.",
         "emailAlert": "Insira um email válido!",
         "maxYearExceeded": "Idade deve ser 16 anos acima.",
-        "nextButtonText": "Próximo"
+        "nextButtonText": "Próximo",
+        "emailSendedMessage": "Enviamos um link de confirmação para seu e-mail. Acesse-o para prosseguir com o registro."
     },
 
     "step2": {
@@ -25,6 +26,9 @@
         "usernameAlert": "São permitidos apenas cacteres alfanúmericos e alguns especiais ('.', '_' e '-').",
         "passwordAlert": "A senha deve conter no mínimo 8 caracteres e sem espaços.",
         "confirmPasswordAlert": "As senhas devem coincidir!",
-        "registerButtonText": "Cadastrar"
+        "registerButtonText": "Cadastrar",
+        "invalidGuidErrorMessage": "Sessão expirada, por favor tente novamente.",
+        "userAlreadyRegisteredErrorMessage": "Este link expirou. Acesse sua conta criada na página inicial.",
+        "backButtonText": "Voltar para a página inicial"
     }
 }

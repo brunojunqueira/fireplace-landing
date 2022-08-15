@@ -95,7 +95,6 @@ function Recover() {
                     )
                 }
             </div>
-
         </Main>
     );
 }

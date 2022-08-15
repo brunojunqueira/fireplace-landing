@@ -12,7 +12,7 @@ export function ButtonSection() {
 
             <Button
                 className={style.buttons__register}
-                redirectTo='/register'
+                redirectTo='/register/step1'
                 text={t('register')}
             />
             <h3>{t('or')}</h3>

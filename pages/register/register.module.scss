@@ -114,5 +114,18 @@
         border: none;
         margin-top: 2rem;
     }
+}
 
+.container__error_message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    .back_button {
+        margin-top: 2rem;
+        background: var(--alt-red);
+        font-weight: 500;
+    }
 }

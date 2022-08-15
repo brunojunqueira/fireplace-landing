@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import style from "./spinner.module.scss";
 
-export function Spinner({ className, loading, size, success, successLabel, errorLabel }) {
+export function Spinner({ className, loading, size, success, successLabel, successIcon, errorLabel, errorIcon }) {
     const styles = `${style.spinner} ${className}`;
 
     return (
@@ -20,7 +20,7 @@ export function Spinner({ className, loading, size, success, successLabel, error
                 : success
                 ? <div className={style.done}>
                     <span className={`${style.done__icon}  ${className} material-symbols-outlined`}>
-                        check_circle
+                        {successIcon ?? 'check_circle'}
                     </span>
                     <span className={style.done__label}>
                         {successLabel}
@@ -28,9 +28,9 @@ export function Spinner({ className, loading, size, success, successLabel, error
                 </div>
                 : <div className={style.error}>
                     <span className={`${style.error__icon}  ${className} material-symbols-outlined`}>
-                        close
+                        {errorIcon ?? 'close'}
                     </span>
-                    <span>
+                    <span className={style.done__label}>
                         {errorLabel}
                     </span>
                 </div>
@@ -41,12 +41,14 @@ export function Spinner({ className, loading, size, success, successLabel, error
 
 Spinner.propTypes = {
     className: PropTypes.any,
-    loading: PropTypes.bool.isRequired,
+    loading: PropTypes.bool,
     size: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number
     ]).isRequired,
-    success: PropTypes.bool.isRequired,
-    successLabel: PropTypes.string.isRequired,
-    errorLabel: PropTypes.string.isRequired,
+    success: PropTypes.bool,
+    successIcon: PropTypes.string,
+    successLabel: PropTypes.string,
+    errorLabel: PropTypes.string,
+    errorIcon: PropTypes.string,
 };

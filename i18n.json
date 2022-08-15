@@ -4,7 +4,8 @@
     "pages":{
         "/": ["home"],
         "/login": ["login"],
-        "/register": ["register"],
+        "/register/step1": ["register"],
+        "/register/step2": ["register"],
         "/login/recover": ["recover"]
     }
 }

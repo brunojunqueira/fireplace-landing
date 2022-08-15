@@ -13,7 +13,8 @@
   100% { transform: rotate(360deg); }
 }
 
-.done{
+.done, 
+.error {
   color: white;
   display: flex;
   flex-direction: column;
@@ -27,6 +28,7 @@
   font-weight: 100;
   user-select: none;
 }
+
 .done__label{
   font-size: 1.2rem;
   text-align: center;
@@ -36,9 +38,7 @@
     width: 90%;
   }
 }
-.error{
 
-}
 .error__icon{
   color: var(--alt-red);
   font-size: 8rem;
