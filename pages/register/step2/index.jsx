@@ -32,6 +32,7 @@ export default function Step2() {
     const { guid } = router.query;
     const [registeredAccountId, setRegisteredAccountId] = useState(0);
     const [invalidError, setInvalidError] = useState('');
+    const [isAccountRegistered, setIsAccountRegistered] = useState(false);
 
     const errorMessages = {
         guid: t('step2.invalidGuidErrorMessage'),
@@ -41,12 +42,14 @@ export default function Step2() {
     useEffect(() => {
         if (guid) {
             checkGuidValidation();
+        } else {
+            goBackToLandingPage();
         }
     }, [guid]);
 
     async function checkGuidValidation() {
         try {
-            // const { data: preRegisteredUserId } = api.get(`/signup-start?guid=${guid}`);
+            // const { data: preRegisteredUserId } = api.get(`/signup-resume?guid=${guid}`);
             const preRegisteredUserId = 1;
 
             setRegisteredAccountId(preRegisteredUserId);
@@ -72,7 +75,9 @@ export default function Step2() {
                 password: model.password,
             };
 
-            // await api.put(`/signup`, model);
+            // await api.put(`/signup-finish`, model);
+
+            setIsAccountRegistered(true);
         } catch (error) {
             console.log(error);
         }
@@ -80,6 +85,10 @@ export default function Step2() {
 
     function goBackToLandingPage() {
         router.push("/");
+    }
+
+    function goToLoginPage() {
+        router.push("/login");
     }
 
     return (
@@ -99,6 +108,19 @@ export default function Step2() {
                             className={style.back_button}
                             text={t('step2.backButtonText')}
                             onClick={goBackToLandingPage}
+                        />
+                    </div>
+                ) : isAccountRegistered ? (
+                    <div className={style.container__error_message}>
+                        <AlertMessage
+                            message={"Registro realizado com sucesso! Clique no botão para ir ao login."}
+                            type="info"
+                        />
+
+                        <Button
+                            className={style.back_button}
+                            text={"Ok"}
+                            onClick={goToLoginPage}
                         />
                     </div>
                 ) : (
