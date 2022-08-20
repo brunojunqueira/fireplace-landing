@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import useTranslation from "next-translate/useTranslation";
 
-import { Main } from "../../../layouts/Main";
-import style from "./recover.module.scss";
+import { Main } from "layouts/Main";
+import style from "_assets/scss/recover.module.scss";
 
-import { Logo } from "../../../components/design/Logo";
-import { Button } from "../../../components/common/Button";
-import { InputText } from "../../../components/common/InputText";
-import { Spinner } from "../../../components/design/Spinner";
+import { Logo } from "components/design/Logo";
+import { Button } from "components/common/Button";
+import { InputText } from "components/common/InputText";
+import { Spinner } from "components/design/Spinner";
 
 function Recover() {
     const [part, setPart] = useState(1);
@@ -90,7 +90,7 @@ function Recover() {
                             className={style.content__spinner}
                             loading={ loading }
                             success={ success }
-                            successLabel = {t('success')}
+                            label = { t('success') }
                         />
                     )
                 }

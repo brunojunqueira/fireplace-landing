@@ -2,15 +2,21 @@ import useTranslation from 'next-translate/useTranslation';
 import { useForm, Controller } from 'react-hook-form';
 import { useState } from 'react';
 
-import style from './login.module.scss';
+import style from '_assets/scss/login.module.scss';
+
 import { Main } from '../../layouts/Main';
 import { Logo } from '../../components/design/Logo';
 import { Button } from '../../components/common/Button';
 import { InputText } from '../../components/common/InputText';
 import { Checkbox } from '../../components/common/Checkbox';
 
+import { useAuth } from 'contexts/AuthenticationContext';
+import router from 'next/router';
+
 function Login() {
     const { t } = useTranslation('login');
+
+    const { login } = useAuth();
 
     const [remember, setRemember] = useState(false);
 
@@ -21,30 +27,13 @@ function Login() {
     };
 
     const onSubmit = async (data) => {
-        // --Implementation--
-        //
-        // const email_exist = await api.post(data.email);
-        // if(email_exist){
-        //      try{
-        //          auth.login(data.email, data.password);
-        //      } catch {
-        //          setError('password', {message: t('passwordError')});
-        //      }
-        // } else {
-        //      setError('email', {message: t('emailerror')});
-        // }
-
-        if (data.email !== 'brunosdsj@gmail.com') {
-            setError('email', { message: t('emailerror') });
+        const result = await login(data.email, data.password, remember);
+        if (result === 'success') {
+            router.push('/feed');
+        } else if (result === 'password') {
+            setError('password', t('passwordError'));
         } else {
-            if (data.password !== '12345678') {
-                setError('password', { message: t('passwordError') });
-            } else {
-                if (remember) {
-                    console.log('lembrou');
-                }
-                console.log("Success");
-            }
+            setError('email', t('emailError'));
         }
     };
 

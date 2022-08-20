@@ -24,38 +24,14 @@
     position: relative;
     width: 30rem;
 
+    cursor: pointer !important;
+
     @media(max-width: 720px){
         width: 60%;
     }
 
     @media(max-width: 480px){
         width: 90%;
-    }
-
-    .form__back_button {
-        position: absolute;
-        top: -3.5rem;
-        left: 0;
-        width: fit-content;
-        background: transparent;
-        border-radius: 50%;
-
-        span {
-            font-size: 2rem;
-            transition: filter .2s;
-
-            &:hover {
-                filter: brightness(0.8);
-            }
-
-            &:active {
-                filter: brightness(0.8);
-            }
-        }
-
-        @media (min-width: 720px) {
-            left: -6rem;
-        }
     }
 }
 
@@ -127,5 +103,7 @@
         margin-top: 2rem;
         background: var(--alt-red);
         font-weight: 500;
+        width: fit-content;
+        padding: 0.5rem 2rem;
     }
 }

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import style from "./spinner.module.scss";
 
-export function Spinner({ className, loading, size, success, successLabel, successIcon, errorLabel, errorIcon }) {
+export function Spinner({ className, loading, size, success, label, successIcon, errorIcon }) {
     const styles = `${style.spinner} ${className}`;
 
     return (
@@ -17,21 +17,17 @@ export function Spinner({ className, loading, size, success, successLabel, succe
                         }
                     }
                 />
-                : success
-                ? <div className={style.done}>
-                    <span className={`${style.done__icon}  ${className} material-symbols-outlined`}>
+                : <div className={style.done}>
+                { success
+                    ? <span className={`${style.done__icon}  ${className} material-symbols-outlined`}>
                         {successIcon ?? 'check_circle'}
                     </span>
-                    <span className={style.done__label}>
-                        {successLabel}
-                    </span>
-                </div>
-                : <div className={style.error}>
-                    <span className={`${style.error__icon}  ${className} material-symbols-outlined`}>
+                : <span className={`${style.error__icon}  ${className} material-symbols-outlined`}>
                         {errorIcon ?? 'close'}
                     </span>
+                }
                     <span className={style.done__label}>
-                        {errorLabel}
+                        {label}
                     </span>
                 </div>
             }
@@ -48,7 +44,6 @@ Spinner.propTypes = {
     ]).isRequired,
     success: PropTypes.bool,
     successIcon: PropTypes.string,
-    successLabel: PropTypes.string,
-    errorLabel: PropTypes.string,
     errorIcon: PropTypes.string,
+    label: PropTypes.string,
 };

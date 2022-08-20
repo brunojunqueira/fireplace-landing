@@ -6,7 +6,7 @@ import { Informations } from '../components/Landing/Informations';
 import { Button } from '../components/common/Button';
 import { Main } from '../layouts/Main';
 
-import style from '../styles/home.module.scss';
+import style from '../_assets/scss/home.module.scss';
 
 function Home() {
     const { t } = useTranslation('home');

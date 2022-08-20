@@ -11,7 +11,7 @@ import * as yup from "yup";
 import { Button } from "components/common/Button";
 import { InputText } from "components/common/InputText";
 
-import style from 'pages/register/register.module.scss';
+import style from '_assets/scss/register.module.scss';
 import { Main } from "layouts/Main";
 import { Logo } from "components/design/Logo";
 import { AlertMessage } from "components/design/AlertMessage";
@@ -40,11 +40,13 @@ export default function Step2() {
     };
 
     useEffect(() => {
-        if (guid) {
-            checkGuidValidation();
-        } else {
-            goBackToLandingPage();
-        }
+        if (router.isReady) {
+            if (guid) {
+                checkGuidValidation();
+            } else {
+                goBackToLandingPage();
+            }
+        };
     }, [guid]);
 
     async function checkGuidValidation() {

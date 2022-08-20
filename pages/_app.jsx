@@ -4,17 +4,21 @@ import PropTypes from 'prop-types';
 
 import sources from './sources.json';
 
-import '../styles/globals.scss';
+import '../_assets/scss/globals.scss';
+
+import AuthenticationProvider from 'contexts/AuthenticationContext';
 
 function MyApp({ Component, pageProps }) {
     return (
         <>
-            <Head>
-            {sources?.map((source, index) => (
-                <link key={index} href={source.href} rel={source.rel} />
-            ))}
-            </Head>
-            <Component {...pageProps} />
+            <AuthenticationProvider>
+                <Head>
+                {sources?.map((source, index) => (
+                    <link key={index} href={source.href} rel={source.rel} />
+                ))}
+                </Head>
+                <Component {...pageProps} />
+            </AuthenticationProvider>
         </>
     );
 }

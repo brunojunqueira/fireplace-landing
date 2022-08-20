@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import { InputSelect } from "components/common/InputSelect";
 
-import style from 'pages/register/register.module.scss';
+import style from '_assets/scss/register.module.scss';
 
 export function SelectInputGroup({ control, formErrors }) {
     const { t } = useTranslation('register');

@@ -13,7 +13,7 @@ import { Button } from "components/common/Button";
 import { InputText } from "components/common/InputText";
 import { SelectInputGroup } from "components/register/SelectInputGroup";
 
-import style from '../register.module.scss';
+import style from '_assets/scss/register.module.scss';
 import { AlertMessage } from "components/design/AlertMessage";
 
 export default function Step1 () {
