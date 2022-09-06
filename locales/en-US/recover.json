@@ -1,6 +1,23 @@
 {
-    "recover": "Recover Password",
-    "label": "We'll send you an email with instructions to recover your password.",
-    "send": "Send",
-    "emailerror":"Insert a valid email!"
+    "htmlHeadTitle": "Create Account",
+    
+    "inputRequired": "This field is required.",
+
+    "step1":{
+        "recover": "Recover Password",
+        "send": "Send",
+        "emailerror":"Insert a valid email!",
+        "success":"If this email is in our system, We'll send you an email with instructions to recover your password."
+    },
+    "step2":{
+        "passwordPlaceholder": "New Password",
+        "confirmPasswordPlaceholder": "Confirm Password",
+        "passwordAlert": "Password must contain at least 8 characters and no spaces.",
+        "confirmPasswordAlert": "Passwords must match!",
+        "passwordButtonText": "Update Password",
+        "invalidGuidErrorMessage": "Session expired, please try again.",
+        "userAlreadyRegisteredErrorMessage": "This link has expired. Access recover page again and we'll send you another email.",
+        "backButtonText": "Back to the home page",
+        "successMessage": "Password updated! Go to login page to sign in."
+    }
 }

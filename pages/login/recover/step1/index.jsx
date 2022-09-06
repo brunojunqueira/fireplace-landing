@@ -10,7 +10,7 @@ import { Button } from "components/common/Button";
 import { InputText } from "components/common/InputText";
 import { Spinner } from "components/design/Spinner";
 
-function Recover() {
+export default function Step1() {
     const [part, setPart] = useState(1);
     const [loading, setLoading] = useState(true);
     const [success, setSuccess] = useState(false);
@@ -98,5 +98,3 @@ function Recover() {
         </Main>
     );
 }
-
-export default Recover;

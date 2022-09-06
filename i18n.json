@@ -6,6 +6,7 @@
         "/login": ["login"],
         "/register/step1": ["register"],
         "/register/step2": ["register"],
-        "/login/recover": ["recover"]
+        "/login/recover/step1": ["recover"],
+        "/login/recover/step2": ["recover"]
     }
 }

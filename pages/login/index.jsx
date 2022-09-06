@@ -104,7 +104,7 @@ function Login() {
                 />
 
                 <Button
-                    redirectTo='/login/recover'
+                    redirectTo='/login/recover/step1'
                     className={style.content__forgot}
                 >
                     <span>
