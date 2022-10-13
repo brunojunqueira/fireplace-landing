@@ -2,6 +2,10 @@
     "login": "Entrar",
     "email": "Email",
     "password": "Senha",
-    "remember": "Lembre-se de mim",
-    "forgot": "Esqueceu a senha?"
+    "remember": "Mantenha-me conectado",
+    "forgot": "Esqueceu a senha?",
+    "emailError":"Insira um email válido!",
+    "passwordRequired":"A senha não pode estar em branco!",
+    "passwordError": "Senha incorreta!"
+
 }

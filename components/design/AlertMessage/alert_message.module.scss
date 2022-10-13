@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    .container__icon {
+        font-size: 10rem;
+        font-weight: 100;
+        user-select: none;
+    }
+
+    .error {
+        color: var(--alt-red);
+    }
+
+    .warning {
+        color: #ffcc00;
+    }
+
+    .info {
+        color: #3D85C6;
+    }
+
+    .success {
+        color: #32B365;
+    }
+
+    .container__message {
+        color: white;
+    }
+}

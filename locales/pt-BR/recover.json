@@ -1,0 +1,23 @@
+{
+    "htmlHeadTitle": "Criar Conta",
+
+    "inputRequired": "Este campo é obrigatório.",
+    
+    "step1":{
+        "recover": "Recuperar Senha",
+        "send": "Enviar",
+        "emailerror":"Insira um email válido!",
+        "success":"Caso esse endereço exista em nosso sistema, enviaremos um email fornecendo instruções para recuperar sua conta."
+    },
+    "step2":{
+        "passwordPlaceholder": "Nova Senha",
+        "confirmPasswordPlaceholder": "Confirmar Senha",
+        "passwordAlert": "A senha deve conter no mínimo 8 caracteres e sem espaços.",
+        "confirmPasswordAlert": "As senhas devem coincidir!",
+        "passwordButtonText": "Atualizar Senha",
+        "invalidGuidErrorMessage": "Sessão expirada, por favor tente novamente.",
+        "userAlreadyRegisteredErrorMessage": "Este link expirou. Acesse a página de recuperação de conta outra vez e envie um novo email.",
+        "backButtonText": "Voltar para a página inicial",
+        "successMessage": "Senha alterada com sucesso! Vá para a página de login para entrar."
+    }
+}

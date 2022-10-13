@@ -1,0 +1,19 @@
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: calc(100vh - 45px);
+    width: 100%;
+
+    @media(max-width: 480px) {
+        min-height: calc(100vh - 60px);
+    }
+
+}

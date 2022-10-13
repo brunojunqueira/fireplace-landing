@@ -1,0 +1,23 @@
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: default;
+    user-select: none;
+    
+    &.clickable{
+        cursor: pointer;
+    }
+}
+
+.logo__text {
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: 'Lora';
+
+    @media(max-width: 720px){
+        display: none;
+    }
+}

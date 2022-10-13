@@ -1,15 +1,34 @@
 {
-    "register": "Criar Conta",
-    "firstName": "Nome",
-    "lastName": "Sobrenome",
-    "email": "E-mail",
-    "userName": "Pseudônimo",
-    "password": "Senha",
-    "confirmPassword": "Confirmar Senha",
-    "fnalert": "Insira apenas seu primeiro nome, sem espaços.",
-    "lnalert": "Insira apenas seu último nome, sem espaços.",
-    "mlalert": "Insira um email válido!",
-    "unalert": "São permitidos apenas cacteres alfanúmericos e alguns especiais ('.', '_' e '-').",
-    "pwalert": "A senha deve conter no mínimo 8 caracteres.",
-    "cpwalert": "As senhas devem coincidir!"
+    "htmlHeadTitle": "Criar Conta",
+
+    "inputRequired": "Este campo é obrigatório.",
+
+    "step1": {
+        "namePlaceholder": "Nome",
+        "fornamePlaceholder": "Sobrenome",
+        "emailPlaceholder": "E-mail",
+        "inputDayPlaceholder": "Dia",
+        "inputMonthPlaceholder": "Mês",
+        "inputYearPlaceholder": "Ano",
+        "fieldRequired": "Este campo é obrigatório.",
+        "nameAlert": "Insira apenas seu primeiro nome, sem espaços.",
+        "fornameAlert": "Insira apenas seu último nome, sem espaços.",
+        "emailAlert": "Insira um email válido!",
+        "maxYearExceeded": "Idade deve ser 16 anos acima.",
+        "nextButtonText": "Próximo",
+        "emailSendedMessage": "Enviamos um link de confirmação para seu e-mail. Acesse-o para prosseguir com o registro."
+    },
+
+    "step2": {
+        "usernamePlaceholder": "Pseudônimo",
+        "passwordPlaceholder": "Senha",
+        "confirmPasswordPlaceholder": "Confirmar Senha",
+        "usernameAlert": "São permitidos apenas cacteres alfanúmericos e alguns especiais ('.', '_' e '-').",
+        "passwordAlert": "A senha deve conter no mínimo 8 caracteres e sem espaços.",
+        "confirmPasswordAlert": "As senhas devem coincidir!",
+        "registerButtonText": "Cadastrar",
+        "invalidGuidErrorMessage": "Sessão expirada, por favor tente novamente.",
+        "userAlreadyRegisteredErrorMessage": "Este link expirou. Acesse sua conta criada na página inicial.",
+        "backButtonText": "Voltar para a página inicial"
+    }
 }
